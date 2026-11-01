@@ -1,7 +1,7 @@
 # Finite-copy quantum metrology: paper and proofs
 
-- `manuscript.pdf` / `manuscript.tex`: English PRA manuscript, 9 pages.
-- `manuscript_zh.pdf` / `manuscript_zh.tex`: complete Chinese manuscript, 8 pages.
+- [English PDF](paper/manuscript.pdf) / [LaTeX](paper/manuscript.tex): English PRA manuscript, 9 pages.
+- [Chinese PDF](paper/manuscript_zh.pdf) / [LaTeX](paper/manuscript_zh.tex): complete Chinese manuscript, 8 pages.
 - `lean/README.md` and `lean/COVERAGE.md`: proof reconstruction and paper-to-theorem map.
 - `lean/verification/`: successful build, 1439-declaration axiom audit, and independent semantic coverage review with reproducible checks.
 - `verify_construction.py`, `verification_results.json`, `requirements.txt`: numerical diagnostics and figure generation.
@@ -10,9 +10,9 @@ Authors: Tingyu Zhang (23300190021@m.fudan.edu.cn); Yan Cen (corresponding autho
 
 ## Reproduction
 
-Install the numerical dependencies with `python -m pip install -r requirements.txt`, then run `python verify_construction.py`. The saved numerical data and both figure images are already included. Floating-point diagnostics are separate from the Lean proofs.
+Install the numerical dependencies with `python -m pip install -r requirements.txt`, then run `python verify_construction.py`. The saved numerical data and the shared English figure in `paper/` are already included. Floating-point diagnostics are separate from the Lean proofs.
 
-Run `pdflatex manuscript.tex` twice for English, and `xelatex manuscript_zh.tex` twice for Chinese. REVTeX 4.2 is required; the Chinese version also uses ctex. Both manuscripts contain their bibliography and use the same English figure. Acknowledgments are placeholders awaiting completion.
+Enter `paper/`, then run `pdflatex manuscript.tex` twice for English, and `xelatex manuscript_zh.tex` twice for Chinese. REVTeX 4.2 is required; the Chinese version also uses ctex. Both manuscripts contain their bibliography and use the same English figure. Acknowledgments are placeholders awaiting completion.
 
 For Lean, install the toolchain specified by `lean/lean-toolchain`, enter `lean/`, obtain the pinned dependency cache with `lake exe cache get`, then run `python verify.py` (or the Windows command in `lean/README.md`). Dependency commits are fixed in `lake-manifest.json`; build caches are not included. The 129 project modules do not import mathematics from another research project.
 

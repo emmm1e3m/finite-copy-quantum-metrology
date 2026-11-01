@@ -184,7 +184,7 @@ if __name__ == "__main__":
             "finite_copy": [finite_copy_cost(n, cache) for n in [1, 2, 5, 10, 20, 50, 100, 200, 400]]}
     (directory / "verification_results.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
     if not args.no_plot:
-        make_figure(data, directory / "precision_scaling.png")
+        make_figure(data, directory / "paper" / "precision_scaling.png")
     print(json.dumps({"sector_count": len(sectors), "matrix_checks": len(data["matrix_checks"]),
                       "max_column_error": max(r["column_integral_max_error"] for r in sectors),
                       "step_halving_V_difference": convergence_difference,
