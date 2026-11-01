@@ -1,0 +1,99 @@
+FiniteCopy.ConvexRoof.finite_mixture_reduce (d : ℕ) (hd : 0 < d) (g : (Fin d → ℝ) → ℝ) (x : Fin d → ℝ)
+  (s : Finset (Fin d → ℝ)) (w : (Fin d → ℝ) → ℝ) (hS : ↑s ⊆ FiniteCopy.ConvexRoof.Simplex d) (hw : ∀ p ∈ s, 0 ≤ w p)
+  (h1 : ∑ p ∈ s, w p = 1) (hx : ∑ p ∈ s, w p • p = x) :
+  ∃ p q,
+    (∀ (a : Fin d), p a ∈ FiniteCopy.ConvexRoof.Simplex d) ∧
+      (∀ (a : Fin d), 0 ≤ q a) ∧
+        ∑ a, q a = 1 ∧ (∀ (i : Fin d), ∑ a, q a * p a i = x i) ∧ ∑ z ∈ s, w z * g z ≤ ∑ a, q a * g (p a)
+'FiniteCopy.ConvexRoof.finite_mixture_reduce' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.ConvexRoof.primal_attained (d : ℕ) (hd : 0 < d) (g : (Fin d → ℝ) → ℝ)
+  (hg : ContinuousOn g (FiniteCopy.ConvexRoof.Simplex d)) :
+  ∃ P,
+    FiniteCopy.ConvexRoof.mixMean P = FiniteCopy.ConvexRoof.uniform d ∧
+      ∀ (s : Finset (Fin d → ℝ)) (w : (Fin d → ℝ) → ℝ),
+        ↑s ⊆ FiniteCopy.ConvexRoof.Simplex d →
+          (∀ p ∈ s, 0 ≤ w p) →
+            ∑ p ∈ s, w p = 1 →
+              ∑ p ∈ s, w p • p = FiniteCopy.ConvexRoof.uniform d →
+                ∑ p ∈ s, w p * g p ≤ FiniteCopy.ConvexRoof.mixValue g P
+'FiniteCopy.ConvexRoof.primal_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.ConvexRoof.exists_uniform_support (d : ℕ) (hd : 0 < d) (g : (Fin d → ℝ) → ℝ)
+  (hg : ContinuousOn g (stdSimplex ℝ (Fin d))) :
+  ∃ p q lam,
+    (∀ (a : Fin d), p a ∈ stdSimplex ℝ (Fin d)) ∧
+      (∀ (a : Fin d), 0 ≤ q a) ∧
+        ∑ a, q a = 1 ∧
+          (∀ (i : Fin d), ∑ a, q a * p a i = 1 / ↑d) ∧
+            (∀ p ∈ stdSimplex ℝ (Fin d), g p ≤ ∑ i, lam i * p i) ∧ ∑ a, q a * g (p a) = (∑ i, lam i) / ↑d
+'FiniteCopy.ConvexRoof.exists_uniform_support' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.effect_sum.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B] [DecidableEq B]
+  {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (hd : ∀ (b : B), n b + 1 ≤ L) (hcomplete : ∑ b, R.embedding b * (R.embedding b).conjTranspose = 1) :
+  ∑ z, FiniteCopy.SeedBlocks.effect R S z = 1
+'FiniteCopy.SeedBlocks.effect_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.fisher_matrix.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B]
+  [DecidableEq B] {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (horth : ∀ (b c : B), b ≠ c → (R.embedding b).conjTranspose * R.embedding c = 0) (hL : 3 ≤ L) :
+  (fun a b =>
+      CopyQuantumMetrology.fisherEntry MeasureTheory.Measure.count (FiniteCopy.SeedBlocks.probability R S)
+        (FiniteCopy.SeedBlocks.outcomeScore R S) a b) =
+    (FiniteCopy.SeedBlocks.totalFisher w S / 2) • 1
+'FiniteCopy.SeedBlocks.fisher_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.fisher_trace.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B]
+  [DecidableEq B] {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (horth : ∀ (b c : B), b ≠ c → (R.embedding b).conjTranspose * R.embedding c = 0) (hL : 3 ≤ L) :
+  FiniteCopy.POVM.statisticalFisherTrace MeasureTheory.Measure.count (FiniteCopy.SeedBlocks.probability R S)
+      (FiniteCopy.SeedBlocks.outcomeScore R S) =
+    FiniteCopy.SeedBlocks.totalFisher w S
+'FiniteCopy.SeedBlocks.fisher_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.momentUnbiased.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B]
+  [DecidableEq B] {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (horth : ∀ (b c : B), b ≠ c → (R.embedding b).conjTranspose * R.embedding c = 0) (hL : 3 ≤ L)
+  (hT : 0 < FiniteCopy.SeedBlocks.totalFisher w S) :
+  FiniteCopy.Risk.MomentUnbiased MeasureTheory.Measure.count (FiniteCopy.SeedBlocks.probability R S)
+    (FiniteCopy.SeedBlocks.tangent R S) (FiniteCopy.SeedBlocks.estimator R S)
+'FiniteCopy.SeedBlocks.momentUnbiased' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.estimator_risk.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B]
+  [DecidableEq B] {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (horth : ∀ (b c : B), b ≠ c → (R.embedding b).conjTranspose * R.embedding c = 0) (hL : 3 ≤ L)
+  (hT : 0 < FiniteCopy.SeedBlocks.totalFisher w S) (N : ℕ) :
+  FiniteCopy.Risk.risk MeasureTheory.Measure.count N (FiniteCopy.SeedBlocks.probability R S)
+      (FiniteCopy.SeedBlocks.estimator R S) =
+    4 * ↑N / FiniteCopy.SeedBlocks.totalFisher w S
+'FiniteCopy.SeedBlocks.estimator_risk' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedBlocks.risk_attainable.{u_1} {ι : Type u_1} {B : Type} [Fintype ι] [DecidableEq ι] [Fintype B]
+  [DecidableEq B] {n k : B → ℕ} {L : ℕ} [NeZero L] {ρ : Matrix ι ι ℂ} {D : Fin 2 → Matrix ι ι ℂ} {w : B → ℝ}
+  (R : FiniteCopy.Risk.BlockResolution ρ D n w) (S : (b : B) → FiniteCopy.SeedPOVM.Scheme (n b) (k b))
+  (hd : ∀ (b : B), n b + 1 ≤ L) (hL : 3 ≤ L)
+  (horth : ∀ (b c : B), b ≠ c → (R.embedding b).conjTranspose * R.embedding c = 0)
+  (hcomplete : ∑ b, R.embedding b * (R.embedding b).conjTranspose = 1) (hT : 0 < FiniteCopy.SeedBlocks.totalFisher w S)
+  (N : ℕ) : 4 * ↑N / FiniteCopy.SeedBlocks.totalFisher w S ∈ FiniteCopy.Risk.attainableRisks N ρ D
+'FiniteCopy.SeedBlocks.risk_attainable' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.actualNH_below_C (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.NHOperator.actualNHRisk N ≤ FiniteCopy.MainTheorem.C N
+'FiniteCopy.MainTheorem.actualNH_below_C' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.actualNH_strict_gap (N : ℕ) (hN : 10 ≤ N) :
+  FiniteCopy.NHOperator.actualNHRisk N < FiniteCopy.MainTheorem.C N
+'FiniteCopy.MainTheorem.actualNH_strict_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.actualNH_first_correction :
+  Filter.Tendsto (fun N => √↑N * (FiniteCopy.NHOperator.actualNHRisk N - 2)) Filter.atTop (nhds √(8 / Real.pi))
+'FiniteCopy.MainTheorem.actualNH_first_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.actualNH_gap_littleO :
+  (fun N => FiniteCopy.MainTheorem.C N - FiniteCopy.NHOperator.actualNHRisk N) =o[Filter.atTop] fun N => 1 / √↑N
+'FiniteCopy.MainTheorem.actualNH_gap_littleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+CopyQuantumMetrology.GaussianLimit.actual_paper_uniform_error {n : ℕ} {eps delta : ℝ} (hn : 1 ≤ n) (he : 0 < eps)
+  (he1 : eps ≤ 1) (hd : 0 < delta) (hd1 : delta ≤ 1) (hlargeE : 1 / eps ≤ CopyQuantumMetrology.spinJ n)
+  (hlargeD : 1 ≤ CopyQuantumMetrology.spinJ n * delta) :
+  |CopyQuantumMetrology.ContinuousEnergy.U n eps / CopyQuantumMetrology.spinJ n - √(1 + eps ^ 2) / 2| ≤
+    40000 *
+      (1 / eps ^ 7 * (delta + 1 / CopyQuantumMetrology.spinJ n) +
+          (1 / (eps ^ 2 * delta ^ 6) + 1 / (eps ^ 12 * delta ^ 4)) / √(CopyQuantumMetrology.spinJ n) +
+        (1 + Real.log (2 * CopyQuantumMetrology.spinJ n)) / CopyQuantumMetrology.spinJ n)
+'CopyQuantumMetrology.GaussianLimit.actual_paper_uniform_error' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

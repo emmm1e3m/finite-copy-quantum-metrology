@@ -1,0 +1,85 @@
+FiniteCopy.Optimization.PureEnsemble.probability_integral.{u_1} {n : ℕ} {Ω : Type u_1} [MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} (E : FiniteCopy.Optimization.PureEnsemble n Ω μ) : ∫ (z : Ω), E.probability z ∂μ = 1
+'FiniteCopy.Optimization.PureEnsemble.probability_integral' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.PureEnsemble.variance_integrable.{u_1} {n : ℕ} {Ω : Type u_1} [MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} (E : FiniteCopy.Optimization.PureEnsemble n Ω μ) :
+  MeasureTheory.Integrable
+    (fun z =>
+      E.probability z *
+        (CopyQuantumMetrology.pureVariance (CopyQuantumMetrology.spinX (CopyQuantumMetrology.spinCoefficient n))
+            (E.state z) +
+          CopyQuantumMetrology.pureVariance (CopyQuantumMetrology.spinY (CopyQuantumMetrology.spinCoefficient n))
+            (E.state z)))
+    μ
+'FiniteCopy.Optimization.PureEnsemble.variance_integrable' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.PureEnsemble.fisher_variance.{u_1} {n : ℕ} {Ω : Type u_1} [MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} (E : FiniteCopy.Optimization.PureEnsemble n Ω μ) :
+  ∫ (z : Ω), FiniteCopy.POVM.fisherDensity n (FiniteCopy.Algebra.spinEdge n) (E.toPOVM.effect z) ∂μ =
+    8 / 3 * (↑n / 2) * (↑n / 2 + 1) - 4 * E.variance
+'FiniteCopy.Optimization.PureEnsemble.fisher_variance' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.psd_fisher_le_dual (n : ℕ) (lam : Fin (n + 1) → ℝ)
+  (hlam : FiniteCopy.Optimization.IsDualCertificate n lam) (E : Matrix (Fin (n + 1)) (Fin (n + 1)) ℂ)
+  (hE : E.PosSemidef) :
+  FiniteCopy.POVM.fisherDensity n (FiniteCopy.Algebra.spinEdge n) E ≤ (∑ i, lam i * (E i i).re) / (↑n + 1)
+'FiniteCopy.Optimization.psd_fisher_le_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.density_fisher_le_dual.{u_1} {Ω : Type u_1} [MeasurableSpace Ω] (μ : MeasureTheory.Measure Ω)
+  (n : ℕ) (lam : Fin (n + 1) → ℝ) (hlam : FiniteCopy.Optimization.IsDualCertificate n lam)
+  (M : FiniteCopy.Risk.DensityPOVM (Fin (n + 1)) Ω μ) :
+  ∫ (z : Ω), FiniteCopy.POVM.fisherDensity n (FiniteCopy.Algebra.spinEdge n) (M.effect z) ∂μ ≤
+    FiniteCopy.Optimization.dualValue n lam
+'FiniteCopy.Optimization.density_fisher_le_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.exists_optimalScheme (n : ℕ) : Nonempty (FiniteCopy.Optimization.OptimalScheme n)
+'FiniteCopy.Optimization.exists_optimalScheme' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.sectorFisher_isGreatest (n : ℕ) :
+  IsGreatest (FiniteCopy.Optimization.fisherValues n) (FiniteCopy.Optimization.sectorFisher n)
+'FiniteCopy.Optimization.sectorFisher_isGreatest' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.commonVarianceRoof_isLeast (n : ℕ) :
+  IsLeast (FiniteCopy.Optimization.varianceValues n) (FiniteCopy.Optimization.commonVarianceRoof n)
+'FiniteCopy.Optimization.commonVarianceRoof_isLeast' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.exact_sector_reduction (n : ℕ) :
+  FiniteCopy.Optimization.sectorFisher n =
+    8 / 3 * (↑n / 2) * (↑n / 2 + 1) - 4 * FiniteCopy.Optimization.commonVarianceRoof n
+'FiniteCopy.Optimization.exact_sector_reduction' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.rawSeed_isGreatest (n : ℕ) :
+  IsGreatest (FiniteCopy.Optimization.rawSeedValues n) (FiniteCopy.Optimization.sectorFisher n)
+'FiniteCopy.Optimization.rawSeed_isGreatest' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.roof_sandwich_W (n : ℕ) :
+  NHLowerBound.spinL n ≤ FiniteCopy.Optimization.commonVarianceRoof n ∧
+    FiniteCopy.Optimization.commonVarianceRoof n ≤
+      CopyQuantumMetrology.ContinuousEnergy.W n (CopyQuantumMetrology.epsilon (CopyQuantumMetrology.spinJ n))
+'FiniteCopy.Optimization.roof_sandwich_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.commonVarianceRoof_spin_littleO :
+  (fun n => FiniteCopy.Optimization.commonVarianceRoof n - ↑n / 2 / 2) =o[Filter.atTop] fun n => ↑n / 2
+'FiniteCopy.Optimization.commonVarianceRoof_spin_littleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.tensorFisher_isGreatest (N : ℕ) :
+  IsGreatest
+    (FiniteCopy.Optimization.modelFisherValues (CopyQuantumMetrology.TensorModel.rhoTensor N 0 0)
+      (CopyQuantumMetrology.SpinPaths.tangentAxes N))
+    (FiniteCopy.Optimization.tensorFisherDenominator N)
+'FiniteCopy.Optimization.tensorFisher_isGreatest' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.ordinary_sectorFisher_maximum (n : ℕ) :
+  IsGreatest
+    (FiniteCopy.Optimization.ordinaryFisherValues (FiniteCopy.POVM.state n) (FiniteCopy.Optimization.sectorTangent n))
+    (FiniteCopy.Optimization.sectorFisher n)
+'FiniteCopy.Optimization.ordinary_sectorFisher_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.ordinary_tensorFisher_maximum (N : ℕ) :
+  IsGreatest
+    (FiniteCopy.Optimization.ordinaryFisherValues (CopyQuantumMetrology.TensorModel.rhoTensor N 0 0)
+      (CopyQuantumMetrology.SpinPaths.tangentAxes N))
+    (FiniteCopy.Schur.schurAverage FiniteCopy.Optimization.sectorFisher N)
+'FiniteCopy.Optimization.ordinary_tensorFisher_maximum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.C_exact_fisher (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.MainTheorem.C N = 4 * ↑N / FiniteCopy.Schur.schurAverage FiniteCopy.Optimization.sectorFisher N
+'FiniteCopy.Optimization.C_exact_fisher' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.C_exact_roof (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.MainTheorem.C N =
+    4 * ↑N / (2 * ↑N - 4 * FiniteCopy.Schur.schurAverage FiniteCopy.Optimization.commonVarianceRoof N)
+'FiniteCopy.Optimization.C_exact_roof' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.Optimization.C_minimum_attained (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.MainTheorem.C N ∈
+    FiniteCopy.MainTheorem.ordinaryAttainableRisks N (CopyQuantumMetrology.TensorModel.rhoTensor N 0 0)
+      (CopyQuantumMetrology.SpinPaths.tangentAxes N)
+'FiniteCopy.Optimization.C_minimum_attained' depends on axioms: [propext, Classical.choice, Quot.sound]
+checked_C_trueLU_minimum (N : ℕ) (hN : 0 < N) :
+  IsLeast (FiniteCopy.MainTheorem.tensorAttainableRisks N) (FiniteCopy.MainTheorem.C N)
+'checked_C_trueLU_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+{
+  "build_passed": true,
+  "audited_declarations": 1439,
+  "used_axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "unexpected_axioms": [],
+  "scope_note": "编译及公理审计不替代对最终定理前提与物理对象的覆盖审查。"
+}

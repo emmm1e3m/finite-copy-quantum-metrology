@@ -1,0 +1,101 @@
+FiniteCopy.NHOperator.originalNH_derivative_x (N : ℕ) :
+  HasDerivAt (fun x => CopyQuantumMetrology.TensorModel.rhoTensor N x 0)
+    ((2 / 2 ^ N) • FiniteCopy.NHOperator.axisX (FiniteCopy.NHOperator.physicalRaising N)) 0
+'FiniteCopy.NHOperator.originalNH_derivative_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.NHOperator.originalNH_derivative_y (N : ℕ) :
+  HasDerivAt (fun y => CopyQuantumMetrology.TensorModel.rhoTensor N 0 y)
+    ((2 / 2 ^ N) • FiniteCopy.NHOperator.axisY (FiniteCopy.NHOperator.physicalRaising N)) 0
+'FiniteCopy.NHOperator.originalNH_derivative_y' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.NHOperator.originalNH_values (N : ℕ) :
+  FiniteCopy.NHOperator.nhValues (2 ^ N) (FiniteCopy.NHOperator.physicalRaising N) =
+    FiniteCopy.NHOperator.nhValues (2 ^ N)
+      (FiniteCopy.NHOperator.blockRaising (CopyQuantumMetrology.SpinPaths.spin N) fun b =>
+        FiniteCopy.Algebra.spinEdge (CopyQuantumMetrology.SpinPaths.spin N b))
+'FiniteCopy.NHOperator.originalNH_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.NHOperator.originalNH_minimum (N : ℕ) (hN : 0 < N) :
+  IsLeast (FiniteCopy.NHOperator.nhValues (2 ^ N) (FiniteCopy.NHOperator.physicalRaising N))
+    ((2 ^ N) ^ 2 / FiniteCopy.NHOperator.pathCapacity N)
+'FiniteCopy.NHOperator.originalNH_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.NHOperator.originalNH_formula (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.NHOperator.actualNHRisk N = 4 * ↑N / FiniteCopy.Schur.schurAverage FiniteCopy.Risk.capFisherBound N
+'FiniteCopy.NHOperator.originalNH_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.NHOperator.originalNH_deficit (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.NHOperator.actualNHRisk N = 4 * ↑N / (2 * ↑N - 4 * FiniteCopy.Schur.schurAverage NHLowerBound.spinL N)
+'FiniteCopy.NHOperator.originalNH_deficit' depends on axioms: [propext, Classical.choice, Quot.sound]
+CopyQuantumMetrology.FixedWidth.fixed_positive_C2_scale_limit {b : ℝ → ℝ} (hb : ContDiffOn ℝ 2 b (Set.Icc (-1) 1))
+  (hpos : ∀ x ∈ Set.Icc (-1) 1, 0 < b x) :
+  Filter.Tendsto (fun n => CopyQuantumMetrology.FixedWidth.U b n / CopyQuantumMetrology.GlobalBounds.spinJ n)
+    Filter.atTop (nhds ((∫ (x : ℝ) in -1..1, x ^ 2 * b x + 1 / (4 * b x)) / 2))
+'CopyQuantumMetrology.FixedWidth.fixed_positive_C2_scale_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+CopyQuantumMetrology.FixedWidth.fixed_positive_C2_energy_limit {b : ℝ → ℝ} (hb : ContDiffOn ℝ 2 b (Set.Icc (-1) 1))
+  (hpos : ∀ x ∈ Set.Icc (-1) 1, 0 < b x) :
+  Filter.Tendsto (fun n => CopyQuantumMetrology.FixedWidth.U b n / (↑n / 2)) Filter.atTop
+    (nhds ((∫ (x : ℝ) in -1..1, x ^ 2 * b x + 1 / (4 * b x)) / 2))
+'CopyQuantumMetrology.FixedWidth.fixed_positive_C2_energy_limit' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+CopyQuantumMetrology.FixedWidth.U_regularized_eq (n : ℕ) (eps : ℝ) :
+  CopyQuantumMetrology.FixedWidth.U (CopyQuantumMetrology.GlobalBounds.regularizedWidth eps) n =
+    CopyQuantumMetrology.ContinuousEnergy.U n eps
+'CopyQuantumMetrology.FixedWidth.U_regularized_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+CopyQuantumMetrology.FixedWidth.G_global_exists {b : ℝ → ℝ} (hb : ContDiffOn ℝ 2 b CopyQuantumMetrology.GeneralWidth.K)
+  (hpos : ∀ x ∈ CopyQuantumMetrology.GeneralWidth.K, 0 < b x) :
+  ∃ C,
+    0 ≤ C ∧
+      ∀ (J : ℝ),
+        1 ≤ J → ∀ (m : ℝ), |m| ≤ J - 1 / 2 → |m + 1| ≤ J - 1 / 2 → CopyQuantumMetrology.FixedWidth.G b J m ≤ C * J
+'CopyQuantumMetrology.FixedWidth.G_global_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+CopyQuantumMetrology.FixedWidth.G_bulk_exists {b : ℝ → ℝ} (hb : ContDiffOn ℝ 2 b CopyQuantumMetrology.GeneralWidth.K)
+  (hpos : ∀ x ∈ CopyQuantumMetrology.GeneralWidth.K, 0 < b x) {delta : ℝ} (hd : 0 < delta) (hd1 : delta ≤ 1) :
+  ∃ K,
+    0 ≤ K ∧
+      ∀ (J : ℝ),
+        1 ≤ J →
+          ∀ (m : ℝ),
+            |m / J| ≤ 1 - delta →
+              |(m + 1) / J| ≤ 1 - delta → |CopyQuantumMetrology.FixedWidth.G b J m / J - 1 / (4 * b (m / J))| ≤ K / √J
+'CopyQuantumMetrology.FixedWidth.G_bulk_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.outcomeEffect_complete {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k)
+  (hd : n + 1 ≤ L) : ∑ z, S.outcomeEffect z = 1
+'FiniteCopy.SeedPOVM.Scheme.outcomeEffect_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.fisher_matrix {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k) (hL : 3 ≤ L) :
+  (fun a b => CopyQuantumMetrology.fisherEntry MeasureTheory.Measure.count S.probability S.outcomeScore a b) =
+    (2 * S.value) • 1
+'FiniteCopy.SeedPOVM.Scheme.fisher_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.fisher_trace {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k) (hL : 3 ≤ L) :
+  FiniteCopy.POVM.statisticalFisherTrace MeasureTheory.Measure.count S.probability S.outcomeScore = S.totalFisher
+'FiniteCopy.SeedPOVM.Scheme.fisher_trace' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.momentUnbiased {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k) (hL : 3 ≤ L)
+  (hT : 0 < S.totalFisher) :
+  FiniteCopy.Risk.MomentUnbiased MeasureTheory.Measure.count S.probability S.tangent S.estimator
+'FiniteCopy.SeedPOVM.Scheme.momentUnbiased' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.estimator_risk {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k) (hL : 3 ≤ L)
+  (hT : 0 < S.totalFisher) (N : ℕ) :
+  FiniteCopy.Risk.risk MeasureTheory.Measure.count N S.probability S.estimator = 4 * ↑N / S.totalFisher
+'FiniteCopy.SeedPOVM.Scheme.estimator_risk' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.risk_attainable {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k) (hd : n + 1 ≤ L)
+  (hL : 3 ≤ L) (hT : 0 < S.totalFisher) (N : ℕ) :
+  4 * ↑N / S.totalFisher ∈
+    FiniteCopy.Risk.attainableRisks N (CopyQuantumMetrology.spinReference n) fun a =>
+      CopyQuantumMetrology.spinTangent (CopyQuantumMetrology.spinCoefficient n) (CopyQuantumMetrology.phaseCoordinate a)
+'FiniteCopy.SeedPOVM.Scheme.risk_attainable' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.ensemble_complete {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k)
+  (hd : n + 1 ≤ L) :
+  ∑ z, S.ensembleWeight z • CopyQuantumMetrology.rankOne (S.ensembleState z) = CopyQuantumMetrology.spinReference n
+'FiniteCopy.SeedPOVM.Scheme.ensemble_complete' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.SeedPOVM.Scheme.ensemble_variance_trace_identity {n k L : ℕ} [NeZero L] (S : FiniteCopy.SeedPOVM.Scheme n k)
+  (hd : n + 1 ≤ L) :
+  S.totalFisher =
+    8 / 3 * (↑n / 2) * (↑n / 2 + 1) -
+      4 *
+        ∑ z,
+          S.ensembleWeight z *
+            (CopyQuantumMetrology.pureVariance (CopyQuantumMetrology.spinX (CopyQuantumMetrology.spinCoefficient n))
+                (S.ensembleState z) +
+              CopyQuantumMetrology.pureVariance (CopyQuantumMetrology.spinY (CopyQuantumMetrology.spinCoefficient n))
+                (S.ensembleState z))
+'FiniteCopy.SeedPOVM.Scheme.ensemble_variance_trace_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+checked_originalNH_strict_gap (N : ℕ) (hN : 10 ≤ N) : FiniteCopy.NHOperator.actualNHRisk N < FiniteCopy.MainTheorem.C N
+'checked_originalNH_strict_gap' depends on axioms: [propext, Classical.choice, Quot.sound]

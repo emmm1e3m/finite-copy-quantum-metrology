@@ -1,0 +1,51 @@
+FiniteCopy.MainTheorem.C_eq_true_unbiased_inf (N : ℕ) :
+  FiniteCopy.MainTheorem.C N = sInf (FiniteCopy.MainTheorem.tensorAttainableRisks N)
+'FiniteCopy.MainTheorem.C_eq_true_unbiased_inf' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.tensor_locally_unbiased_iff_moments.{u_1} {Ω : Type u_1} [MeasurableSpace Ω]
+  (μ : MeasureTheory.Measure Ω) (N : ℕ) (M : FiniteCopy.Risk.DensityPOVM (CopyQuantumMetrology.TensorModel.Bits N) Ω μ)
+  (u : Ω → Fin 2 → ℝ) :
+  FiniteCopy.MainTheorem.TensorLocallyUnbiased μ N M u ↔
+    FiniteCopy.Risk.MomentUnbiased μ
+      (fun z => CopyQuantumMetrology.born (CopyQuantumMetrology.TensorModel.rhoTensor N 0 0) (M.effect z))
+      (fun z a => CopyQuantumMetrology.born (CopyQuantumMetrology.SpinPaths.tangentAxes N a) (M.effect z)) u
+'FiniteCopy.MainTheorem.tensor_locally_unbiased_iff_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.gaussianMeasurement_isPOVM (N : ℕ) :
+  FiniteCopy.MainTheorem.IsOrdinaryPOVM
+    (FiniteCopy.Risk.DensityPOVM.operatorMeasure (FiniteCopy.MainTheorem.outcomeMeasure N)
+      (FiniteCopy.MainTheorem.gaussianMeasurement N))
+'FiniteCopy.MainTheorem.gaussianMeasurement_isPOVM' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.finite_N_gaussian_locally_unbiased (N : ℕ) (hN : 0 < N) (a b : Fin 2) :
+  ∫ (z : FiniteCopy.MainTheorem.Outcome N),
+        CopyQuantumMetrology.born (CopyQuantumMetrology.TensorModel.rhoTensor N 0 0)
+            ((FiniteCopy.MainTheorem.gaussianMeasurement N).effect z) *
+          FiniteCopy.MainTheorem.gaussianEstimator N z a ∂FiniteCopy.MainTheorem.outcomeMeasure N =
+      0 ∧
+    HasDerivAt
+      (fun θ =>
+        ∫ (z : FiniteCopy.MainTheorem.Outcome N),
+          FiniteCopy.MainTheorem.gaussianEstimator N z a *
+            CopyQuantumMetrology.born (FiniteCopy.MainTheorem.rhoAxis N b θ)
+              ((FiniteCopy.MainTheorem.gaussianMeasurement N).effect z) ∂FiniteCopy.MainTheorem.outcomeMeasure N)
+      (if a = b then 1 else 0) 0
+'FiniteCopy.MainTheorem.finite_N_gaussian_locally_unbiased' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.gaussianRisk_eq (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.MainTheorem.gaussianRisk N = 2 * ↑N / CopyQuantumMetrology.globalGaussianFisher N
+'FiniteCopy.MainTheorem.gaussianRisk_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.optimal_risk_first_correction :
+  Filter.Tendsto (fun N => √↑N * (FiniteCopy.MainTheorem.C N - 2)) Filter.atTop (nhds √(8 / Real.pi))
+'FiniteCopy.MainTheorem.optimal_risk_first_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.gaussian_risk_first_correction :
+  Filter.Tendsto (fun N => √↑N * (FiniteCopy.MainTheorem.gaussianRisk N - 2)) Filter.atTop (nhds √(8 / Real.pi))
+'FiniteCopy.MainTheorem.gaussian_risk_first_correction' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.strict_cap_gap (N : ℕ) (hN : 10 ≤ N) :
+  4 * ↑N / FiniteCopy.Schur.schurAverage FiniteCopy.Risk.capFisherBound N < FiniteCopy.MainTheorem.C N
+'FiniteCopy.MainTheorem.strict_cap_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.cap_gap_littleO :
+  (fun N =>
+      FiniteCopy.MainTheorem.C N -
+        4 * ↑N / FiniteCopy.Schur.schurAverage FiniteCopy.Risk.capFisherBound N) =o[Filter.atTop]
+    fun N => 1 / √↑N
+'FiniteCopy.MainTheorem.cap_gap_littleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+FiniteCopy.MainTheorem.reducedNH_eq_capRisk (N : ℕ) (hN : 0 < N) :
+  FiniteCopy.NHOptimization.reducedNH N = 4 * ↑N / FiniteCopy.Schur.schurAverage FiniteCopy.Risk.capFisherBound N
+'FiniteCopy.MainTheorem.reducedNH_eq_capRisk' depends on axioms: [propext, Classical.choice, Quot.sound]

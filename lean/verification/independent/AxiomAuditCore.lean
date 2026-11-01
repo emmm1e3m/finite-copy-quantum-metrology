@@ -1,0 +1,21 @@
+import FiniteCopy.GaussianLimit
+import FiniteCopy.POVMDensity
+import FiniteCopy.StrictPOVMGap
+import FiniteCopy.ExpectationIntegrability
+
+-- 独立审计真实对象终端；这里只读正式库，不复制证明或重建数学前提。
+#print CopyQuantumMetrology.GaussianLimit.actual_U_limit
+#print axioms CopyQuantumMetrology.GaussianLimit.actual_U_limit
+#print CopyQuantumMetrology.GaussianLimit.actual_W_limit
+#print axioms CopyQuantumMetrology.GaussianLimit.actual_W_limit
+#print axioms CopyQuantumMetrology.logarithmic_gaussian_measurement
+#print axioms NHLowerBound.canonical_spinL_ratio_limit
+#print axioms FiniteCopy.Schur.schurAverage_littleO
+#print FiniteCopy.Risk.exists_density_of_operator_povm
+#print axioms FiniteCopy.Risk.exists_density_of_operator_povm
+#print FiniteCopy.POVM.canonical_arbitrary_density_fisher_strict_gap
+#print axioms FiniteCopy.POVM.canonical_arbitrary_density_fisher_strict_gap
+#print axioms CopyQuantumMetrology.TensorModel.rhoTensor_hasDerivAt_x
+#print axioms CopyQuantumMetrology.TensorModel.rhoTensor_hasDerivAt_y
+#print axioms CopyQuantumMetrology.TensorModel.rhoTensor_expectation_hasDerivAt_x_of_firstMoment
+#print axioms CopyQuantumMetrology.TensorModel.rhoTensor_expectation_hasDerivAt_y_of_firstMoment

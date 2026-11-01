@@ -1,0 +1,11 @@
+.lake/
+__pycache__/
+*.olean
+*.ilean
+*.pyc
+*.aux
+*.log
+!lean/verification/**/*.log
+*.out
+*.toc
+*.synctex.gz

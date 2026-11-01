@@ -1,0 +1,24 @@
+import FiniteCopy.MainTheorem
+import FiniteCopy.ReducedNH
+
+-- 检查正式原模型终端的实际类型及公理，不展开巨大的证明项。
+#check FiniteCopy.MainTheorem.C_eq_true_unbiased_inf
+#print axioms FiniteCopy.MainTheorem.C_eq_true_unbiased_inf
+#check FiniteCopy.MainTheorem.tensor_locally_unbiased_iff_moments
+#print axioms FiniteCopy.MainTheorem.tensor_locally_unbiased_iff_moments
+#check FiniteCopy.MainTheorem.gaussianMeasurement_isPOVM
+#print axioms FiniteCopy.MainTheorem.gaussianMeasurement_isPOVM
+#check FiniteCopy.MainTheorem.finite_N_gaussian_locally_unbiased
+#print axioms FiniteCopy.MainTheorem.finite_N_gaussian_locally_unbiased
+#check FiniteCopy.MainTheorem.gaussianRisk_eq
+#print axioms FiniteCopy.MainTheorem.gaussianRisk_eq
+#check FiniteCopy.MainTheorem.optimal_risk_first_correction
+#print axioms FiniteCopy.MainTheorem.optimal_risk_first_correction
+#check FiniteCopy.MainTheorem.gaussian_risk_first_correction
+#print axioms FiniteCopy.MainTheorem.gaussian_risk_first_correction
+#check FiniteCopy.MainTheorem.strict_cap_gap
+#print axioms FiniteCopy.MainTheorem.strict_cap_gap
+#check FiniteCopy.MainTheorem.cap_gap_littleO
+#print axioms FiniteCopy.MainTheorem.cap_gap_littleO
+#check FiniteCopy.MainTheorem.reducedNH_eq_capRisk
+#print axioms FiniteCopy.MainTheorem.reducedNH_eq_capRisk

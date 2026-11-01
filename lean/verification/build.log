@@ -1,0 +1,2071 @@
+⚠ [3136/3151] Replayed FiniteCopy.ClebschGordan
+warning: FiniteCopy\ClebschGordan.lean: imports `Mathlib.Analysis.Complex.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\ClebschGordan.lean: imports `Mathlib.LinearAlgebra.Matrix.Kronecker` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\ClebschGordan.lean: imports `Mathlib.Data.Matrix.Block` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\ClebschGordan.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/ClebschGordan.lean:81:48: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+warning: FiniteCopy/ClebschGordan.lean:86:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: FiniteCopy/ClebschGordan.lean:81:38: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ite_mul_ite, mul_zero, if_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3137/3151] Replayed FiniteCopy.Ladder
+warning: FiniteCopy\Ladder.lean: imports `Mathlib.Data.Matrix.Basis` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/Ladder.lean:64:17: This simp argument is unused:
+  Matrix.add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply, Matrix.one_apply,
+    Fin.sum_univ_two, R, Fin.sum_univ_one, Matrix.single_apply, edge, Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Ladder.lean:65:49: This simp argument is unused:
+  Fin.sum_univ_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.add_mul, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply,
+    Matrix.one_apply, R, Fin.sum_univ_one, Matrix.single_apply, edge, Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Ladder.lean:66:7: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.add_mul, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply,
+    Matrix.one_apply, Fin.sum_univ_two, R, Matrix.single_apply, edge, Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Ladder.lean:66:25: This simp argument is unused:
+  Matrix.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.add_mul, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply,
+    Matrix.one_apply, Fin.sum_univ_two, R, Fin.sum_univ_one, edge, Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Ladder.lean:72:17: This simp argument is unused:
+  Matrix.add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply, Matrix.one_apply,
+    Fin.sum_univ_two, R, Fin.sum_univ_one, Matrix.single_apply, edge, Finset.sum_add_distrib, add_comm,
+    Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Ladder.lean:74:7: This simp argument is unused:
+  Fin.sum_univ_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorR, Matrix.add_mul, Matrix.mul_apply, Fintype.sum_prod_type, Matrix.kroneckerMap_apply,
+    Matrix.one_apply, Fin.sum_univ_two, R, Matrix.single_apply, edge, Finset.sum_add_distrib, add_comm,
+    Matrix.submatrix_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3139/3151] Replayed FiniteCopy.Intertwining
+warning: FiniteCopy/Intertwining.lean:70:16: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Intertwining.lean:78:14: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3140/3151] Replayed FiniteCopy.SpinCoupling
+warning: FiniteCopy/SpinCoupling.lean:61:6: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [complexTensorR, tensorR, complexR, Matrix.kroneckerMap_apply, hij, hbc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinCoupling.lean:83:6: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tensorJy, Jy, Matrix.kroneckerMap_apply, Matrix.conjTranspose_apply, hij, hbc, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinCoupling.lean:83:43: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinCoupling.lean:83:43: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SpinCoupling.lean:156:34: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinCoupling.lean:156:34: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3652/3759] Replayed FiniteCopy.QuantumModel
+warning: FiniteCopy\QuantumModel.lean: imports `Mathlib.Analysis.Matrix.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\QuantumModel.lean: imports `Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\QuantumModel.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\QuantumModel.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/QuantumModel.lean:34:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: FiniteCopy/QuantumModel.lean:50:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.effect_positive`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:54:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.phase_average_effect`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:91:15: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/QuantumModel.lean:113:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.trace_rankOne`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:116:22: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rankOne, Matrix.trace_vecMulVec, dotProduct, vectorMass, Complex.mul_conj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/QuantumModel.lean:118:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.trace_mul_rankOne`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:128:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.vectorMass_nonneg`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:141:14: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [born, Matrix.trace_smul, trace_mul_rankOne, RCLike.real_smul_eq_coe_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/QuantumModel.lean:155:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.effect_integrable`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:174:52: This simp argument is unused:
+  ← Complex.ofReal_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.star_def, Complex.conj_ofReal, ← sq]
+
+Note: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/QuantumModel.lean:179:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.trace_mul_integrable`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:228:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.fisher_variance_pointwise`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/QuantumModel.lean:234:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/QuantumModel.lean:234:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3653/3759] Replayed FiniteCopy.Phase
+warning: FiniteCopy\Phase.lean: imports `Mathlib.Analysis.SpecialFunctions.Complex.CircleAddChar` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Phase.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [3654/3759] Replayed FiniteCopy.SpinPhase
+warning: FiniteCopy/SpinPhase.lean:67:54: Unused tactic linter: `push_cast` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinPhase.lean:85:33: This simp argument is unused:
+  star_star
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [star_sum, star_mul, Complex.star_def, Complex.conj_ofReal, map_map, Complex.conj_conj] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:85:83: This simp argument is unused:
+  map_map
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [star_sum, star_mul, star_star, Complex.star_def, Complex.conj_ofReal, Complex.conj_conj] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:90:33: This simp argument is unused:
+  Complex.conj_conj
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Complex.star_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:116:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinPhase.lean:116:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SpinPhase.lean:121:57: This simp argument is unused:
+  Complex.div_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PhaseMoments.cy, Complex.mul_re, Complex.mul_im, Complex.div_im, Complex.normSq_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:122:4: This simp argument is unused:
+  Complex.div_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PhaseMoments.cy, Complex.mul_re, Complex.mul_im, Complex.div_re, Complex.normSq_ofNat]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:122:20: This simp argument is unused:
+  Complex.normSq_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PhaseMoments.cy, Complex.mul_re, Complex.mul_im, Complex.div_re, Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SpinPhase.lean:123:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinPhase.lean:123:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3658/3759] Replayed FiniteCopy.Operators
+warning: FiniteCopy/Operators.lean:60:6: This simp argument is unused:
+  Sigma.mk.inj_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sourceEquiv, diagOp, tensorOp, Matrix.kroneckerMap_apply, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:62:51: This simp argument is unused:
+  Sigma.mk.inj_iff
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sourceEquiv, diagOp, Matrix.blockDiagonal'_apply, h, Matrix.kroneckerMap_apply, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:76:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:81:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, outOp_up_down]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:82:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:87:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, outOp_down_up]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:88:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/Operators.lean:95:36: This simp argument is unused:
+  Matrix.submatrix_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [diagOp, Signature.next, Matrix.blockDiagonal'_apply, h, Subtype.mk.injEq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3660/3759] Replayed FiniteCopy.Embeddings
+warning: FiniteCopy/Embeddings.lean:32:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.SpinPaths.Frame.mul_diag_entry`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [3662/3759] Replayed FiniteCopy.TensorModel
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Matrix.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Calculus.Deriv.Mul` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Calculus.Deriv.Add` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Calculus.Deriv.Linear` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Calculus.Deriv.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Analysis.Complex.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.LinearAlgebra.Matrix.Kronecker` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\TensorModel.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/TensorModel.lean:86:97: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/TensorModel.lean:86:97: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3663/3759] Replayed FiniteCopy.TensorRecursion
+warning: FiniteCopy/TensorRecursion.lean:42:66: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/TensorRecursion.lean:42:66: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3664/3759] Replayed FiniteCopy.ActualFrame
+warning: FiniteCopy/ActualFrame.lean:26:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/ActualFrame.lean:41:32: This simp argument is unused:
+  Fintype.sum_sigma
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.one_apply, he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [3698/3759] Replayed FiniteCopy.Schur
+warning: FiniteCopy\Schur.lean: imports `Mathlib.Analysis.SpecialFunctions.Stirling` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Schur.lean: imports `Mathlib.Analysis.Asymptotics.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Schur.lean: imports `Mathlib.Data.Nat.Choose.Sum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Schur.lean: imports `Mathlib.Data.Nat.Choose.Central` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Schur.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: FiniteCopy/Schur.lean:355:6: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: FiniteCopy/Schur.lean:357:61: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Schur.lean:357:61: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: FiniteCopy/Schur.lean:440:42: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+info: FiniteCopy/Schur.lean:443:66: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: FiniteCopy/Schur.lean:440:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Schur.lean:443:62: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Schur.lean:440:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/Schur.lean:443:62: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+info: FiniteCopy/Schur.lean:638:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: FiniteCopy/Schur.lean:647:54: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Schur.lean:647:64: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Schur.lean:647:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/Schur.lean:647:64: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3809/3893] Replayed FiniteCopy.Gaussian
+warning: FiniteCopy\Gaussian.lean: imports `Mathlib.Probability.Distributions.Gaussian.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Gaussian.lean: imports `Mathlib.Analysis.SpecialFunctions.Pow.Deriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Gaussian.lean: imports `Mathlib.MeasureTheory.Integral.IntegralEqImproper` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Gaussian.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/Gaussian.lean:233:35: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Gaussian.lean:233:66: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/Gaussian.lean:233:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/Gaussian.lean:233:66: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3810/3893] Replayed FiniteCopy.BulkAsymptotics
+warning: FiniteCopy\BulkAsymptotics.lean: imports `Mathlib.Analysis.SpecialFunctions.Sqrt` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\BulkAsymptotics.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\BulkAsymptotics.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/BulkAsymptotics.lean:123:22: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/BulkAsymptotics.lean:123:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3811/3893] Replayed FiniteCopy.GaussianTransport
+warning: FiniteCopy\GaussianTransport.lean: imports `Mathlib.MeasureTheory.Measure.Haar.NormedSpace` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/GaussianTransport.lean:17:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianTransport.lean:17:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3812/3893] Replayed FiniteCopy.GlobalBounds
+warning: FiniteCopy\GlobalBounds.lean: imports `Mathlib.Analysis.SpecialFunctions.Sqrt` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/GlobalBounds.lean:124:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:124:54: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:124:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GlobalBounds.lean:124:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GlobalBounds.lean:167:59: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:167:88: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:167:59: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GlobalBounds.lean:167:88: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GlobalBounds.lean:218:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:218:6: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GlobalBounds.lean:218:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [3813/3893] Replayed FiniteCopy.SymmetricPosition
+warning: FiniteCopy/SymmetricPosition.lean:51:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SymmetricPosition.lean:51:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [3814/3893] Replayed FiniteCopy.ActualPosition
+warning: FiniteCopy/ActualPosition.lean:52:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:52:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:55:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:55:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:58:75: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:52:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/ActualPosition.lean:55:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/ActualPosition.lean:58:75: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/ActualPosition.lean:69:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:69:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ActualPosition.lean:69:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9072/9177] Replayed FiniteCopy.FiniteBlocks
+warning: FiniteCopy\FiniteBlocks.lean: imports `Mathlib.MeasureTheory.Integral.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\FiniteBlocks.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\FiniteBlocks.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/FiniteBlocks.lean:13:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.count_prod_eq_sum_map`:
+  [MeasurableSingletonClass B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSingletonClass B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9073/9177] Replayed FiniteCopy.BornExpectation
+warning: FiniteCopy/BornExpectation.lean:11:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.TensorModel.born_hasDerivAt`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BornExpectation.lean:47:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.TensorModel.integral_born`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BornExpectation.lean:70:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.TensorModel.born_real_smul_right`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9074/9177] Replayed FiniteCopy.Width
+warning: FiniteCopy\Width.lean: imports `Mathlib.Analysis.SpecialFunctions.Sqrt` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Width.lean: imports `Mathlib.Analysis.Calculus.Deriv.Inv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Width.lean: imports `Mathlib.Analysis.Calculus.Deriv.Add` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\Width.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/Width.lean:98:31: Variable name `hJ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hJ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9075/9177] Replayed FiniteCopy.GradientMain
+warning: FiniteCopy/GradientMain.lean:37:45: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: FiniteCopy/GradientMain.lean:145:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientMain.lean:145:35: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientMain.lean:145:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GradientMain.lean:145:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9076/9177] Replayed FiniteCopy.BulkParameters
+warning: FiniteCopy/BulkParameters.lean:12:5: Variable name `hd1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hd1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9077/9177] Replayed FiniteCopy.SpinStatistics
+warning: FiniteCopy/SpinStatistics.lean:115:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinStatistics.lean:115:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SpinStatistics.lean:115:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/SpinStatistics.lean:131:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9078/9177] Replayed FiniteCopy.IntegratedSpin
+warning: FiniteCopy/IntegratedSpin.lean:31:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/IntegratedSpin.lean:31:6: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/IntegratedSpin.lean:31:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9079/9177] Replayed FiniteCopy.DiscreteBounds
+warning: FiniteCopy\DiscreteBounds.lean: imports `Mathlib.NumberTheory.Harmonic.Bounds` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/DiscreteBounds.lean:40:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/DiscreteBounds.lean:40:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9081/9177] Replayed FiniteCopy.GradientBounds
+warning: FiniteCopy\GradientBounds.lean: imports `Mathlib.MeasureTheory.Integral.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GradientBounds.lean: imports `Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/GradientBounds.lean:67:5: Variable name `hA` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hA
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: FiniteCopy/GradientBounds.lean:67:18: Variable name `hB` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hB
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: FiniteCopy/GradientBounds.lean:121:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientBounds.lean:121:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GradientBounds.lean:137:24: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientBounds.lean:137:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientBounds.lean:159:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GradientBounds.lean:137:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GradientBounds.lean:137:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GradientBounds.lean:159:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GradientBounds.lean:180:19: This simp argument is unused:
+  Pi.add_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Pi.sub_apply] at hh
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9082/9177] Replayed FiniteCopy.SecondDerivative
+warning: FiniteCopy/SecondDerivative.lean:111:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:114:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:117:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:119:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:111:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:114:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:117:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:119:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:299:58: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:301:58: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:308:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/SecondDerivative.lean:299:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:301:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/SecondDerivative.lean:308:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9083/9177] Replayed FiniteCopy.PositionUniform
+info: FiniteCopy/PositionUniform.lean:138:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: FiniteCopy/PositionUniform.lean:112:30: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/PositionUniform.lean:112:44: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/PositionUniform.lean:141:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/PositionUniform.lean:141:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/PositionUniform.lean:141:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/PositionUniform.lean:112:30: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/PositionUniform.lean:112:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9084/9177] Replayed FiniteCopy.WeightedReduction
+warning: FiniteCopy\WeightedReduction.lean: imports `Mathlib.Analysis.Convex.Caratheodory` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\WeightedReduction.lean: imports `Mathlib.Analysis.Convex.StdSimplex` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\WeightedReduction.lean: imports `Mathlib.LinearAlgebra.AffineSpace.FiniteDimensional` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\WeightedReduction.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9086/9177] Replayed FiniteCopy.GeneralWidth
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Analysis.Calculus.ContDiff.Deriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Analysis.Calculus.Deriv.Add` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Analysis.Calculus.Deriv.Inv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Analysis.Calculus.Deriv.Pow` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Analysis.Calculus.TangentCone.Real` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Topology.Order.Compact` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Topology.Order.Lattice` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\GeneralWidth.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/GeneralWidth.lean:127:9: Variable name `s` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _s
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: FiniteCopy/GeneralWidth.lean:132:9: Variable name `s` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _s
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9087/9177] Replayed FiniteCopy.SpinHermitian
+warning: FiniteCopy/SpinHermitian.lean:22:8: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9088/9177] Replayed FiniteCopy.TensorDensity
+warning: FiniteCopy/TensorDensity.lean:18:42: This simp argument is unused:
+  Matrix.mul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rho, rhoFactor, sigmaX, sigmaY, Matrix.vecMul, dotProduct, Fin.sum_univ_two, Matrix.conjTranspose_apply,
+    Complex.ext_iff, Complex.mul_re, Complex.mul_im, Complex.inv_re, Complex.inv_im, Complex.normSq_ofNat,
+    Complex.smul_re, Complex.smul_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/TensorDensity.lean:20:60: This simp argument is unused:
+  Complex.smul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rho, rhoFactor, sigmaX, sigmaY, Matrix.mul_apply, Matrix.vecMul, dotProduct, Fin.sum_univ_two,
+    Matrix.conjTranspose_apply, Complex.ext_iff, Complex.mul_re, Complex.mul_im, Complex.inv_re, Complex.inv_im,
+    Complex.normSq_ofNat, Complex.smul_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/TensorDensity.lean:21:6: This simp argument is unused:
+  Complex.smul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rho, rhoFactor, sigmaX, sigmaY, Matrix.mul_apply, Matrix.vecMul, dotProduct, Fin.sum_univ_two,
+    Matrix.conjTranspose_apply, Complex.ext_iff, Complex.mul_re, Complex.mul_im, Complex.inv_re, Complex.inv_im,
+    Complex.normSq_ofNat, Complex.smul_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/TensorDensity.lean:21:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/TensorDensity.lean:21:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9089/9177] Replayed FiniteCopy.FisherPositive
+warning: FiniteCopy/FisherPositive.lean:49:27: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/FisherPositive.lean:49:31: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/FisherPositive.lean:49:31: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9090/9177] Replayed FiniteCopy.EndpointBounds
+warning: FiniteCopy/EndpointBounds.lean:124:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EndpointBounds.lean:124:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EndpointBounds.lean:124:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/EndpointBounds.lean:140:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EndpointBounds.lean:140:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9093/9177] Replayed FiniteCopy.SimplexReduction
+warning: FiniteCopy\SimplexReduction.lean: imports `Mathlib.Data.Fin.Embedding` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/SimplexReduction.lean:32:13: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, hne, Ne.symm hne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/SimplexReduction.lean:32:35: This simp argument is unused:
+  Ne.symm hne
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, Pi.single_apply, hne] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9094/9177] Replayed FiniteCopy.Primal
+warning: FiniteCopy\Primal.lean: imports `Mathlib.Topology.Order.Compact` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9095/9177] Replayed FiniteCopy.HypographCone
+warning: FiniteCopy\HypographCone.lean: imports `Mathlib.Analysis.LocallyConvex.Separation` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\HypographCone.lean: imports `Mathlib.Analysis.Normed.Affine.AddTorsorBases` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9097/9177] Replayed FiniteCopy.FixedDefinitions
+warning: FiniteCopy/FixedDefinitions.lean:29:22: Variable name `t` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _t
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9099/9177] Replayed FiniteCopy.GeneralGradientBounds
+warning: FiniteCopy/GeneralGradientBounds.lean:32:24: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:32:38: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:58:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:32:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GeneralGradientBounds.lean:32:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GeneralGradientBounds.lean:58:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GeneralGradientBounds.lean:139:54: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:140:58: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:147:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GeneralGradientBounds.lean:139:54: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GeneralGradientBounds.lean:140:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GeneralGradientBounds.lean:147:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9100/9177] Replayed FiniteCopy.GeneralGradientBulk
+warning: FiniteCopy/GeneralGradientBulk.lean:128:59: Variable name `hA` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hA
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+⚠ [9103/9177] Replayed FiniteCopy.Algebra
+warning: FiniteCopy\Algebra.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9104/9177] Replayed FiniteCopy.LowerBound
+warning: FiniteCopy\LowerBound.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9106/9177] Replayed FiniteCopy.POVMLower
+warning: FiniteCopy\POVMLower.lean: imports `Mathlib.Analysis.Matrix.Order` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/POVMLower.lean:444:6: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/POVMLower.lean:444:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9107/9177] Replayed FiniteCopy.NHOptimization
+warning: FiniteCopy\NHOptimization.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9109/9177] Replayed FiniteCopy.MatrixDual
+warning: FiniteCopy/MatrixDual.lean:26:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.tr_add`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:27:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.tr_sub`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:28:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.tr_zero`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:29:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.tr_real_smul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:45:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.effect_zero`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:160:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/MatrixDual.lean:160:40: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/MatrixDual.lean:160:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/MatrixDual.lean:160:40: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/MatrixDual.lean:196:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.tr_gram`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:198:4: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tr, Matrix.trace, Matrix.diag, Matrix.mul_apply, Matrix.conjTranspose_apply, Complex.mul_conj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/MatrixDual.lean:204:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.gram_diag`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/MatrixDual.lean:205:54: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.mul_apply, Matrix.conjTranspose_apply, Complex.mul_conj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/MatrixDual.lean:210:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.diagonal_effect`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9110/9177] Replayed FiniteCopy.UnitaryTransport
+warning: FiniteCopy/UnitaryTransport.lean:13:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_add`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:16:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_sub`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:19:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_smul`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:22:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_real_smul`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:25:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_adjoint`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:33:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_positive`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:39:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_mul`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:45:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_trace`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/UnitaryTransport.lean:53:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.transport_inverse`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9111/9177] Replayed FiniteCopy.RiskTerminal
+warning: FiniteCopy\RiskTerminal.lean: imports `Mathlib.MeasureTheory.SpecificCodomains.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\RiskTerminal.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.Set` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/RiskTerminal.lean:173:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.blockProbability_nonneg`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:177:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.blockDerivative_zero`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:208:69: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: FiniteCopy/RiskTerminal.lean:192:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.blockFisherDensity_bound`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:277:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.blockFisherDensity_score`:
+  [MeasurableSpace Ω]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [MeasurableSpace Ω] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:371:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.sandwich_integrable`:
+  [DecidableEq ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:382:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.integral_sandwich`:
+  [DecidableEq ι]
+  [Fintype κ]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [Fintype κ] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:410:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.born_sandwich`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:493:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/RiskTerminal.lean:610:0: automatically included section variable(s) unused in theorem `FiniteCopy.Risk.sandwich_inverse`:
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/RiskTerminal.lean:626:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9112/9177] Replayed FiniteCopy.POVMCompatibility
+warning: FiniteCopy/POVMCompatibility.lean:17:18: This simp argument is unused:
+  Nat.min_eq_left (by omega : i.val ≤ n)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/POVMCompatibility.lean:20:18: This simp argument is unused:
+  Nat.min_eq_left (by omega : i.val + 1 ≤ n)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/POVMCompatibility.lean:31:18: This simp argument is unused:
+  Nat.min_eq_left (by omega : i.val ≤ n)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/POVMCompatibility.lean:34:18: This simp argument is unused:
+  Nat.min_eq_left (by omega : i.val + 1 ≤ n)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9115/9177] Replayed FiniteCopy.BlockLift
+warning: FiniteCopy/BlockLift.lean:17:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.liftedEffect_integrable_slice`:
+  [Fintype B]
+  [DecidableEq B]
+  [MeasurableSpace B]
+  [MeasurableSingletonClass B]
+  [SFinite μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype B] [DecidableEq B] [MeasurableSpace B] [MeasurableSingletonClass B] [SFinite μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BlockLift.lean:22:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.liftedEffect_integral_slice`:
+  [Fintype B]
+  [DecidableEq B]
+  [MeasurableSpace B]
+  [MeasurableSingletonClass B]
+  [SFinite μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype B] [DecidableEq B] [MeasurableSpace B] [MeasurableSingletonClass B] [SFinite μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BlockLift.lean:42:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.compression_lift_same`:
+  [DecidableEq ι]
+  [Fintype B]
+  [DecidableEq B]
+  [MeasurableSpace B]
+  [MeasurableSingletonClass B]
+  [SFinite μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq
+  ι] [Fintype B] [DecidableEq B] [MeasurableSpace B] [MeasurableSingletonClass B] [SFinite μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BlockLift.lean:50:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.compression_lift_other`:
+  [DecidableEq ι]
+  [Fintype B]
+  [DecidableEq B]
+  [MeasurableSpace B]
+  [MeasurableSingletonClass B]
+  [SFinite μ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq
+  ι] [Fintype B] [DecidableEq B] [MeasurableSpace B] [MeasurableSingletonClass B] [SFinite μ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9116/9177] Replayed FiniteCopy.NHBlockSDP
+warning: FiniteCopy/NHBlockSDP.lean:12:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.complexMoment_adjoint`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHBlockSDP.lean:15:4: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [complexMoment, Matrix.conjTranspose_add, Matrix.conjTranspose_smul, hX.eq, hY.eq, sub_eq_add_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:20:78: This simp argument is unused:
+  Matrix.add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [complexMoment, squareSum, commutator, Matrix.sub_mul, Matrix.mul_add, Matrix.smul_mul,
+    Matrix.mul_smul, smul_smul, Complex.I_mul_I, neg_one_smul, smul_sub, smul_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:21:84: This simp argument is unused:
+  smul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [complexMoment, squareSum, commutator, Matrix.sub_mul, Matrix.mul_add, Matrix.add_mul,
+    Matrix.smul_mul, Matrix.mul_smul, smul_smul, Complex.I_mul_I, neg_one_smul, smul_sub]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:27:78: This simp argument is unused:
+  Matrix.sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [complexMoment, squareSum, commutator, Matrix.mul_sub, Matrix.add_mul, Matrix.smul_mul,
+    Matrix.mul_smul, smul_smul, Complex.I_mul_I, neg_one_smul, smul_sub, smul_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:31:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.squareSum_hermitian`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHBlockSDP.lean:36:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.commutator_hermitian`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHBlockSDP.lean:59:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:60:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:65:113: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:67:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:68:26: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:69:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:69:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:59:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:60:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:65:113: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:67:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:68:26: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:69:25: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:69:37: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:129:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:129:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/NHBlockSDP.lean:129:23: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:129:35: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/NHBlockSDP.lean:140:46: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.fromBlocks, Matrix.smul_apply, Complex.mul_re, Complex.mul_im, Complex.div_re, Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:140:63: This simp argument is unused:
+  Complex.mul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.fromBlocks, Matrix.smul_apply, Complex.star_def, Complex.mul_im, Complex.div_re, Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:141:6: This simp argument is unused:
+  Complex.mul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.fromBlocks, Matrix.smul_apply, Complex.star_def, Complex.mul_re, Complex.div_re, Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:141:21: This simp argument is unused:
+  Complex.div_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.fromBlocks, Matrix.smul_apply, Complex.star_def, Complex.mul_re, Complex.mul_im, Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:141:36: This simp argument is unused:
+  Complex.div_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.fromBlocks, Matrix.smul_apply, Complex.star_def, Complex.mul_re, Complex.mul_im, Complex.div_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:160:8: This simp argument is unused:
+  Complex.mul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [nhSlack, Lx, Ly, Lxy, commutator, Matrix.fromBlocks, Matrix.smul_apply, Complex.mul_im, Complex.div_re,
+    Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:160:23: This simp argument is unused:
+  Complex.mul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [nhSlack, Lx, Ly, Lxy, commutator, Matrix.fromBlocks, Matrix.smul_apply, Complex.mul_re, Complex.div_re,
+    Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:160:38: This simp argument is unused:
+  Complex.div_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [nhSlack, Lx, Ly, Lxy, commutator, Matrix.fromBlocks, Matrix.smul_apply, Complex.mul_re, Complex.mul_im,
+    Complex.div_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHBlockSDP.lean:160:53: This simp argument is unused:
+  Complex.div_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [nhSlack, Lx, Ly, Lxy, commutator, Matrix.fromBlocks, Matrix.smul_apply, Complex.mul_re, Complex.mul_im,
+    Complex.div_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9117/9177] Replayed FiniteCopy.ChainCertificate
+warning: FiniteCopy/ChainCertificate.lean:11:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.diagonalReal_sub`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/ChainCertificate.lean:15:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.diagonalReal_pos`:
+  [Fintype ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/ChainCertificate.lean:45:29: This simp argument is unused:
+  Matrix.mul_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [R, W, diagonalReal, Matrix.diagonal_mul, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/ChainCertificate.lean:45:44: This simp argument is unused:
+  Matrix.diagonal_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [R, W, diagonalReal, Matrix.mul_sub, hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/ChainCertificate.lean:69:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+warning: FiniteCopy/ChainCertificate.lean:78:13: This simp argument is unused:
+  Matrix.diag
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [raise_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9118/9177] Replayed FiniteCopy.NHModel
+warning: FiniteCopy/NHModel.lean:36:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.axisX_hermitian`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHModel.lean:39:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.axisY_hermitian`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHModel.lean:43:27: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.smul_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:46:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.complexMoment_axes`:
+  [Fintype ι]
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHModel.lean:48:56: This simp argument is unused:
+  Complex.mul_re
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [complexMoment, axisX, axisY, Matrix.smul_apply, Complex.mul_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:48:72: This simp argument is unused:
+  Complex.mul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [complexMoment, axisX, axisY, Matrix.smul_apply, Complex.mul_re]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:53:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.trace_adjoint_right`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHModel.lean:57:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.pairing_trace`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/NHModel.lean:81:8: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Complex.mul_re, Complex.mul_im] at hxx hyy ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:81:42: This simp argument is unused:
+  Complex.mul_im
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Complex.star_def, Complex.mul_re] at hxx hyy ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:98:25: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tr, axisX, axisY, Matrix.mul_smul, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub,
+    Matrix.trace_add, Matrix.trace_sub, Matrix.trace_smul, Matrix.trace_conjTranspose, hA, hAC, hAdC, hACd, hAdCd,
+    Complex.mul_re, Complex.mul_im, Complex.star_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:98:41: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tr, axisX, axisY, Matrix.smul_mul, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add, Matrix.mul_sub,
+    Matrix.trace_add, Matrix.trace_sub, Matrix.trace_smul, Matrix.trace_conjTranspose, hA, hAC, hAdC, hACd, hAdCd,
+    Complex.mul_re, Complex.mul_im, Complex.star_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/NHModel.lean:101:6: This simp argument is unused:
+  Complex.star_def
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [tr, axisX, axisY, Matrix.smul_mul, Matrix.mul_smul, Matrix.add_mul, Matrix.sub_mul, Matrix.mul_add,
+    Matrix.mul_sub, Matrix.trace_add, Matrix.trace_sub, Matrix.trace_smul, Matrix.trace_conjTranspose, hA, hAC, hAdC,
+    hACd, hAdCd, Complex.mul_re, Complex.mul_im]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9119/9177] Replayed FiniteCopy.BlockNH
+warning: FiniteCopy/BlockNH.lean:13:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.blockRaising_map`:
+  [Fintype B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BlockNH.lean:84:0: automatically included section variable(s) unused in theorem `FiniteCopy.NHOperator.block_raise_smul`:
+  [Fintype B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/BlockNH.lean:121:54: This simp argument is unused:
+  Complex.ofReal_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [blockRaising, Matrix.blockDiagonal'_conjTranspose, ← Matrix.blockDiagonal'_mul,
+    Matrix.trace_blockDiagonal', canonical_mixed_trace]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/BlockNH.lean:130:10: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.trace_smul, block_raise_product_trace]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9120/9177] Replayed FiniteCopy.EnergyAsymptotics
+warning: FiniteCopy\EnergyAsymptotics.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9121/9177] Replayed FiniteCopy.Construction
+warning: FiniteCopy\Construction.lean: imports `Mathlib.MeasureTheory.Function.L2Space` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9123/9177] Replayed FiniteCopy.ProductExperiment
+warning: FiniteCopy\ProductExperiment.lean: imports `Mathlib.MeasureTheory.Integral.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy\ProductExperiment.lean: imports `Mathlib.MeasureTheory.Integral.Bochner.SumMeasure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9125/9177] Replayed FiniteCopy.GaussianRisk
+warning: FiniteCopy/GaussianRisk.lean:72:18: This simp argument is unused:
+  Nat.min_eq_left (Nat.le_of_lt r.isLt)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:75:18: This simp argument is unused:
+  Nat.min_eq_left (show r.val + 1 ≤ n by omega)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:86:18: This simp argument is unused:
+  Nat.min_eq_left (Nat.le_of_lt r.isLt)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:89:18: This simp argument is unused:
+  Nat.min_eq_left (show r.val + 1 ≤ n by omega)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:100:29: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.smul_apply, RCLike.real_smul_eq_coe_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:105:29: This simp argument is unused:
+  smul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.smul_apply, RCLike.real_smul_eq_coe_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/GaussianRisk.lean:101:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GaussianRisk.lean:106:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GaussianRisk.lean:101:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianRisk.lean:106:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9126/9177] Replayed FiniteCopy.FiniteGap
+warning: FiniteCopy/FiniteGap.lean:325:14: This simp argument is unused:
+  cap
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [capR, max_eq_right (sub_nonpos.mpr hc)]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9127/9177] Replayed FiniteCopy.UniformMargin
+warning: FiniteCopy/UniformMargin.lean:63:35: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
+
+Hint: Replace the deprecated name:
+  S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
+⚠ [9131/9177] Replayed FiniteCopy.OptimizationObjects
+warning: FiniteCopy\OptimizationObjects.lean: imports `Mathlib.Analysis.Convex.StdSimplex` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/OptimizationObjects.lean:58:8: `stdSimplex` has been deprecated: Use `Convexity.StdSimplex` instead
+
+Note: The updated constant has a different type:
+  (R : Type u) → [LE R] → [AddCommMonoid R] → [One R] → Type v → Type (max u v)
+instead of
+  (𝕜 : Type u_2) → (ι : Type u_1) → [Semiring 𝕜] → [PartialOrder 𝕜] → [Fintype ι] → Set (ι → 𝕜)
+warning: FiniteCopy/OptimizationObjects.lean:65:16: `stdSimplex` has been deprecated: Use `Convexity.StdSimplex` instead
+
+Note: The updated constant has a different type:
+  (R : Type u) → [LE R] → [AddCommMonoid R] → [One R] → Type v → Type (max u v)
+instead of
+  (𝕜 : Type u_2) → (ι : Type u_1) → [Semiring 𝕜] → [PartialOrder 𝕜] → [Fintype ι] → Set (ι → 𝕜)
+⚠ [9132/9177] Replayed FiniteCopy.EnsembleIdentity
+warning: FiniteCopy/EnsembleIdentity.lean:49:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/EnsembleIdentity.lean:49:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EnsembleIdentity.lean:49:6: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EnsembleIdentity.lean:63:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/EnsembleIdentity.lean:63:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EnsembleIdentity.lean:76:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/EnsembleIdentity.lean:76:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9133/9177] Replayed FiniteCopy.SimplexDual
+warning: FiniteCopy/SimplexDual.lean:18:41: `stdSimplex` has been deprecated: Use `Convexity.StdSimplex` instead
+
+Note: The updated constant has a different type:
+  (R : Type u) → [LE R] → [AddCommMonoid R] → [One R] → Type v → Type (max u v)
+instead of
+  (𝕜 : Type u_2) → (ι : Type u_1) → [Semiring 𝕜] → [PartialOrder 𝕜] → [Fintype ι] → Set (ι → 𝕜)
+⚠ [9136/9177] Replayed FiniteCopy.RateFunctional
+warning: FiniteCopy\RateFunctional.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/RateFunctional.lean:21:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/RateFunctional.lean:21:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RateFunctional.lean:38:46: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/RateFunctional.lean:38:46: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RateFunctional.lean:191:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/RateFunctional.lean:191:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RateFunctional.lean:254:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/RateFunctional.lean:254:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RateFunctional.lean:254:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RateFunctional.lean:331:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/RateFunctional.lean:331:20: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9137/9177] Replayed FiniteCopy.EnergyAssembly
+warning: FiniteCopy/EnergyAssembly.lean:172:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/EnergyAssembly.lean:172:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/EnergyAssembly.lean:172:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9138/9177] Replayed FiniteCopy.GaussianLimit
+warning: FiniteCopy/GaussianLimit.lean:273:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:273:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:273:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/GaussianLimit.lean:300:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:300:6: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:300:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/GaussianLimit.lean:405:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:405:4: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GaussianLimit.lean:532:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:532:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: FiniteCopy/GaussianLimit.lean:601:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:601:6: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianLimit.lean:601:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9139/9177] Replayed FiniteCopy.GaussianVariance
+warning: FiniteCopy/GaussianVariance.lean:78:21: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianVariance.lean:78:25: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianVariance.lean:78:25: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9140/9177] Replayed FiniteCopy.VarianceIdentification
+warning: FiniteCopy/VarianceIdentification.lean:27:47: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+warning: FiniteCopy/VarianceIdentification.lean:56:2: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/VarianceIdentification.lean:56:2: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9142/9177] Replayed FiniteCopy.FiniteSeed
+warning: FiniteCopy\FiniteSeed.lean: imports `Mathlib.Analysis.Convex.StdSimplex` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: FiniteCopy/FiniteSeed.lean:15:25: `stdSimplex` has been deprecated: Use `Convexity.StdSimplex` instead
+
+Note: The updated constant has a different type:
+  (R : Type u) → [LE R] → [AddCommMonoid R] → [One R] → Type v → Type (max u v)
+instead of
+  (𝕜 : Type u_2) → (ι : Type u_1) → [Semiring 𝕜] → [PartialOrder 𝕜] → [Fintype ι] → Set (ι → 𝕜)
+warning: FiniteCopy/FiniteSeed.lean:84:15: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/FiniteSeed.lean:268:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedPOVM.Scheme.ensembleWeight_nonneg`:
+  [NeZero L]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [NeZero L] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9143/9177] Replayed FiniteCopy.SeedBlocks
+warning: FiniteCopy/SeedBlocks.lean:33:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedBlocks.finite_integrable`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/SeedBlocks.lean:37:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedBlocks.effect_positive`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/SeedBlocks.lean:41:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedBlocks.effect_sum`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/SeedBlocks.lean:65:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedBlocks.compression_same`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/SeedBlocks.lean:73:0: automatically included section variable(s) unused in theorem `FiniteCopy.SeedBlocks.compression_other`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9144/9177] Replayed FiniteCopy.POVMDensity
+warning: FiniteCopy\POVMDensity.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+⚠ [9145/9177] Replayed FiniteCopy.OrdinaryRisk
+warning: FiniteCopy/OrdinaryRisk.lean:57:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9146/9177] Replayed FiniteCopy.StrictRisk
+warning: FiniteCopy/StrictRisk.lean:93:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9147/9177] Replayed FiniteCopy.FamilyStatistics
+warning: FiniteCopy/FamilyStatistics.lean:36:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.familyFisher_pos`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/FamilyStatistics.lean:44:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.family_integrable_slices`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/FamilyStatistics.lean:63:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.family_mean_slice`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/FamilyStatistics.lean:70:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.family_cross_slice`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/FamilyStatistics.lean:85:0: automatically included section variable(s) unused in theorem `FiniteCopy.GaussianLift.family_second_slice`:
+  [DecidableEq B]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq B] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+⚠ [9149/9177] Replayed FiniteCopy.ExpectationIntegrability
+warning: FiniteCopy/ExpectationIntegrability.lean:12:0: automatically included section variable(s) unused in theorem `CopyQuantumMetrology.TensorModel.psd_norm_entry_le_traceReal`:
+  [DecidableEq ι]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+warning: FiniteCopy/ExpectationIntegrability.lean:63:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ExpectationIntegrability.lean:63:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/ExpectationIntegrability.lean:63:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+⚠ [9150/9177] Replayed FiniteCopy.MainTheorem
+warning: FiniteCopy/MainTheorem.lean:26:17: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp only [topPath, spin_up, ih]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: FiniteCopy/MainTheorem.lean:197:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/MainTheorem.lean:200:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: FiniteCopy/MainTheorem.lean:264:4: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+⚠ [9164/9177] Built FiniteCopy.SchemeBridge (19s)
+warning: FiniteCopy/SchemeBridge.lean:42:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/SchemeBridge.lean:43:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/SchemeBridge.lean:44:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/SchemeBridge.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/SchemeBridge.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/SchemeBridge.lean:53:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9166/9177] Built FiniteCopy.GaussianFisherMember (19s)
+warning: FiniteCopy/GaussianFisherMember.lean:36:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/GaussianFisherMember.lean:36:4: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianFisherMember.lean:36:8: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/GaussianFisherMember.lean:50:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/GaussianFisherMember.lean:51:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: FiniteCopy/GaussianFisherMember.lean:52:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+⚠ [9168/9177] Built FiniteCopy.RawSeeds (20s)
+warning: FiniteCopy/RawSeeds.lean:56:10: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: FiniteCopy/RawSeeds.lean:56:6: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RawSeeds.lean:56:10: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: FiniteCopy/RawSeeds.lean:83:18: This simp argument is unused:
+  Nat.min_eq_left (Nat.le_of_lt r.isLt)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: FiniteCopy/RawSeeds.lean:86:18: This simp argument is unused:
+  Nat.min_eq_left (show r.val + 1 ≤ n by omega)
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [vertex]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [9169/9177] Built FiniteCopy.ExactOptimization (20s)
+⚠ [9170/9177] Built FiniteCopy.ExactBlockLower (18s)
+warning: FiniteCopy/ExactBlockLower.lean:90:2: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9171/9177] Built FiniteCopy.ModelFisher (18s)
+⚠ [9172/9177] Built FiniteCopy.OrdinaryFisher (20s)
+warning: FiniteCopy/OrdinaryFisher.lean:27:4: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [9173/9177] Built FiniteCopy.SchemeBlockBridge (20s)
+✔ [9174/9177] Built FiniteCopy.ExactTensorOptimization (18s)
+✔ [9175/9177] Built FiniteCopy.ExactFiniteN (18s)
+✔ [9176/9177] Built FiniteCopy (18s)
+Build completed successfully (9177 jobs).
