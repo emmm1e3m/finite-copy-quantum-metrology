@@ -1,4 +1,4 @@
-\documentclass[aps,pra,reprint,superscriptaddress]{revtex4-2}
+\documentclass[aps,pra,reprint,superscriptaddress,longbibliography]{revtex4-2}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -28,6 +28,8 @@
 \newcommand{\nh}{\mathrm{NH}}
 \newcommand{\g}{\mathrm G}
 
+\input{figure_caption.tex}
+
 \begin{document}
 \title{The first finite-copy correction in two-parameter qubit estimation}
 \author{Tingyu Zhang}
@@ -38,75 +40,65 @@
 \affiliation{Department of Physics, Fudan University, Shanghai, China}
 \date[]{}
 \begin{abstract}
-Joint measurements of a finite number of quantum-state copies must balance
-information about incompatible parameters. The correction to infinite-copy
-precision quantifies the cost of this finite measurement resource.
+Joint measurements on finitely many quantum-state copies must balance
+information about incompatible spin components. Their approach to
+infinite-copy precision depends on the constraints of a complete measurement.
 We determine the first finite-copy correction to the attainable locally
-unbiased risk for the two-component qubit model at the maximally mixed
-state. If an arbitrary joint measurement acts on $N$ copies and the total
-mean squared error is multiplied by $N$, its optimum is
+unbiased risk for two-parameter qubit estimation at the maximally mixed
+state. Optimizing over joint measurements on $N$ copies, the minimum total
+mean squared error multiplied by $N$ is
 $2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$.
 The central result is that the common convex roof of the two transverse
-spin variances at $I/(2j+1)$ equals $j/2+o(j)$.
-We prove the upper bound using Gaussian columns with a position-dependent
-width. Their populations integrate to one exactly, so a finite phase
-average yields a complete positive operator-valued measure for every
-finite spin. A nonnegative energy decomposition controls the entire
-construction, including both poles and Gaussian tails. A sum-of-squares
-certificate supplies the matching lower bound for all measurements.
-The construction has an explicit width parameter and an exactly locally
-unbiased score estimator for every finite $N$.
-Consequently, the strict finite-copy Nagaoka--Hayashi gap present for
-$N\geq10$ is $o(N^{-1/2})$.
-
+spin variances at the maximally mixed spin-$j$ state $I/(2j+1)$ equals $j/2+o(j)$.
+We construct Gaussian columns with position-dependent widths whose
+populations integrate to one exactly. A finite phase average then produces
+a complete positive operator-valued measure for every finite spin.
+Uniform energy estimates and a matching sum-of-squares lower bound
+establish the optimal correction. An explicit width sequence and a score
+estimator attain it while preserving exact local unbiasedness for every
+finite $N$. The strict finite-copy Nagaoka--Hayashi gap for $N\geq10$
+therefore contributes only $o(N^{-1/2})$ to the normalized risk.
 \end{abstract}
 \maketitle
 
 \section{Introduction}\label{sec:introduction}
 
-Joint measurements on finitely many copies of a quantum state must
-balance information about incompatible observables. Even when the
-infinite-copy precision is known, its first finite-copy correction
-can depend on whether low-variance measurement effects can be
-assembled into an exactly complete measurement. We study this
-question for the two Cartesian components of a qubit at the
-maximally mixed state.
+Finite-copy precision in multiparameter quantum estimation depends on
+how information about incompatible observables can be collected in a
+single measurement. Even when the infinite-copy limit is known,
+constructing a complete measurement that attains its leading correction
+remains a separate problem. We address this question for the two Cartesian
+components of a qubit at the maximally mixed state.
 
-General conic formulations characterize the attainable local risk and
-allow reconstruction of complete measurements
-\cite{HayashiOuyang2023}. Schur--Weyl reduction makes finite-copy
-problems considerably smaller \cite{ZhangHayashi2026}. These results
-provide a finite-dimensional optimization framework; convergence of a
-measurement grid at fixed $N$ does not determine the rate at which
-$C_N$ approaches its infinite-copy limit. The present problem asks for
-that rate and a complete measurement family attaining it.
+Conic formulations characterize the attainable local risk and allow
+reconstruction of complete measurements \cite{HayashiOuyang2023}.
+Schur--Weyl reduction further simplifies the finite-copy optimization
+\cite{ZhangHayashi2026}. These methods provide a finite-dimensional
+framework, but convergence of a measurement grid at fixed $N$ does not
+determine how the optimal risk approaches its infinite-copy limit.
+Here we seek both the correction as the number of copies grows and an
+explicit family of positive operator-valued measures (POVMs) attaining it.
 
 Planar spin squeezing and Gaussian descriptions of low-variance spin
-states are established tools \cite{He2011,Dammeier2015}.
+states provide the local ingredients \cite{He2011,Dammeier2015}.
 In particular, the fixed-squeezing asymptotics of
-\cite[Theorem~4]{Dammeier2015}, after rotation and optimization, give
+Ref.~\cite[Theorem~4]{Dammeier2015}, after rotation and optimization, give
 the local cost $j|x|$ at a fixed nonzero latitude $x$.
-This suggests the formal average $j\int_{-1}^1|x|\,dx/2=j/2$.
-The missing condition is an exact decomposition of $I/d$: independently
-chosen low-variance states need not have the required average
-populations. Our construction imposes that condition column by column
-and controls its average cost globally. Thus the new asymptotic result
-does not require a new Schur reduction, convex-roof identity, or local
-squeezing principle.
+Its formal average is $j\int_{-1}^1|x|\,dx/2=j/2$.
+Realizing this average requires an exact decomposition of $I/d$:
+low-variance states chosen separately need not have the required average
+populations. We enforce this constraint by normalizing each Gaussian
+column before averaging its phase, and then control the resulting
+variance across the entire spin sector.
 
-
-We determine the optimal normalized risk to its first correction,
-$C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$, and provide a single
-explicit family attaining it. Every finite member is a complete
-POVM with an exactly locally unbiased estimator. The strict
-finite-copy Nagaoka--Hayashi (NH) gap for $N\geq10$ is therefore
-subleading on the $N^{-1/2}$ scale.
-
-Section~\ref{sec:model} defines the statistical problem and its
-spin reduction. Section~\ref{sec:result} states the main result,
-and Sec.~\ref{sec:gaussian} specifies the measurement and estimator.
-Section~\ref{sec:gap} discusses finite-copy comparisons.
-The appendixes supply all technical proofs.
+This construction, together with a lower bound valid for all POVMs,
+gives the optimal normalized risk
+$C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$.
+Every finite member of the explicit family is complete and admits an
+exactly locally unbiased estimator. The same analysis shows that the
+strict finite-copy Nagaoka--Hayashi (NH) gap for $N\geq10$ is subleading
+on the $N^{-1/2}$ scale. The proof combines exact population normalization,
+a uniform energy estimate, and averaging over the Schur sectors.
 
 \section{Model and attainable precision}\label{sec:model}\label{sec:reduction}
 Consider the full-rank local qubit model
@@ -114,8 +106,9 @@ Consider the full-rank local qubit model
  \rho_{x,y}=\frac12(I+x\sigma_x+y\sigma_y),\qquad x^2+y^2<1,
  \label{eq:model}
 \end{equation}
-at $(x,y)=(0,0)$. The parameters are Cartesian components of the
-density matrix. For each positive integer $N$, a single arbitrary joint
+at $(x,y)=(0,0)$, where $\sigma_x$ and $\sigma_y$ are Pauli matrices.
+The parameters are Cartesian components of the Bloch vector.
+For each positive integer $N$, a single arbitrary joint
 POVM is applied to $\rho_{x,y}^{\otimes N}$. Its outcome may be discrete
 or continuous. We require the estimator $\widehat\theta=(\widehat x,
 \widehat y)$ to satisfy
@@ -135,14 +128,16 @@ Both the measurement and estimator may depend on the reference point.
 There is no restriction on ancillary systems, classical randomization,
 the number of outcomes, or the rank of the effects.
 
-Write $J_x,J_y,J_z$ for the spin-$j$ angular momentum operators and
-$d=2j+1$. The relevant common variance convex roof is
+Write $J_x,J_y,J_z$ for the spin-$j$ angular momentum operators,
+in units with $\hbar=1$, and let $d=2j+1$. The relevant common
+variance convex roof is
 \begin{equation}
  V_j=\min_{\sum_a p_a\ket{\psi_a}\bra{\psi_a}=I/d}
  \sum_a p_a\bigl(\Var_{\psi_a}J_x+\Var_{\psi_a}J_y\bigr).
  \label{eq:roof}
 \end{equation}
-Both variances use the same decomposition. Such common convex roofs are
+Here the $p_a$ are probabilities and the $\psi_a$ are normalized pure
+states. Both variances use the same decomposition. Such common convex roofs are
 part of the general framework of uncertainty relations based on pure
 state decompositions \cite{TothFrowis2022}.
 
@@ -211,8 +206,8 @@ risk has the same expansion \eqref{eq:main}.
 \end{theorem}
 
 
-The proof separates completeness from the local squeezing
-calculation. Appendix~\ref{sec:lower} gives a sum-of-squares
+The coefficient in \eqref{eq:main} is fixed by the cost of a complete
+identity decomposition within each spin sector. Appendix~\ref{sec:lower} gives a sum-of-squares
 certificate for all POVMs, with lower bound $L_j=j/2+o(j)$.
 Appendix~\ref{sec:energy-proof} proves that the exactly complete
 Gaussian family has average variance $W_j^{\g}=j/2+o(j)$.
@@ -222,8 +217,10 @@ The Schur mean spin satisfies
 $\mathbb E_N j/\sqrt N\to\sqrt{2/\pi}$. For any fixed spin sequence
 $r_j=o(j)$, Appendix~\ref{sec:averaging} proves
 $\mathbb E_N r_j=o(\sqrt N)$ by a direct finite-head and
-large-spin split. This supplies the uniformity needed to obtain
-the $N^{-1/2}$ correction from the spin result. In particular,
+large-spin split. The variance cost, linear in $j$ to leading order,
+therefore becomes a Fisher-information loss of order $\sqrt N$.
+Equation~\eqref{eq:reductions} converts this loss into the $N^{-1/2}$
+correction to the normalized risk. In particular,
 the proof covers both parities of $N$ and includes all small-spin
 sectors.
 
@@ -264,7 +261,9 @@ off-diagonal entries exactly; consequently
  \sum_{\ell=0}^{L-1}\int_\R E_j(dt,\ell)=I.
  \label{eq:complete}
 \end{equation}
-No truncation or subsequent normalization is used. The associated
+Thus column normalization fixes the diagonal entries of the identity,
+while the phase average removes the off-diagonal entries. This
+completeness relation holds over the full real outcome space. The associated
 decomposition of $I/d$ has density $s_j(t)/(dL)$ and normalized
 vectors $v_{t,\ell}/\sqrt{s_j(t)}$.
 
@@ -276,8 +275,17 @@ variances, so
  \left[\sum_m A_m v_m(t)^2-\frac{h_j(t)^2}{s_j(t)}\right]dt.
  \label{eq:W}
 \end{equation}
-For clarity, the measurement of Theorem~\ref{thm:main} uses the
-following fully specified width:
+The width is selected by balancing two contributions to the variance.
+Appendix~\ref{sec:energy-proof} bounds \eqref{eq:W} by a sum of
+nonnegative position and discrete-gradient energies, with a smaller
+coefficient correction. Their leading densities are $x^2b(x)$ and
+$1/[4b(x)]$, respectively, for the rescaled spin coordinate $x=m/J$.
+Away from the equator, increasing the width raises the first contribution
+and lowers the second.
+Their balance suggests $b(x)=1/(2|x|)$ away from the equator.
+We regularize it as $b_\epsilon(x)=1/(2\sqrt{x^2+\epsilon^2})$;
+with \eqref{eq:epsilon}, the measurement of Theorem~\ref{thm:main}
+therefore uses the explicit width:
 \begin{equation}
  S_m=\frac{J^2-m^2}{2\sqrt{m^2+\epsilon_j^2J^2}},\qquad
  J=j+\frac12,
@@ -286,7 +294,8 @@ following fully specified width:
 and one may set $L=\max(2j+1,3)$. First measure the Schur label $j$.
 For $j>0$ apply \eqref{eq:gaussian-povm}, tensor the effects with
 the multiplicity identity, and for $j=0$ use its identity effect.
-At outcome $(j,t,\ell)$, the conditional score is
+The score is the gradient of the log outcome probability at the
+reference point. At outcome $(j,t,\ell)$, its conditional value is
 \begin{equation}
  u(j,t,\ell)=\frac{2h_j(t)}{s_j(t)}
  \begin{pmatrix}\cos\phi_\ell\\ \sin\phi_\ell\end{pmatrix}.
@@ -335,61 +344,85 @@ For every $N\geq10$, $C_N-C_N^{\nh}>0$, whereas
  \label{eq:gap}
 \end{equation}
 \end{corollary}
-The obstruction is an exact population constraint: the seeds
-saturating the capped certificate cannot resolve the identity in
-large enough spin sectors. The Gaussian columns satisfy that
-constraint exactly while losing only $o(j)$ in average planar
-variance. Schur averaging turns this into an $o(\sqrt N)$ Fisher
-loss and an $o(N^{-1/2})$ risk gap.
+Figure~\ref{fig:scaling} compares the explicit construction with the NH
+lower bound and the coherent-state benchmark. The left panel resolves
+the average variance within a spin sector; the right panel displays
+the resulting finite-copy risk correction. The Gaussian variance ratio
+at $j=3000$ is $W_j^{\g}/j\simeq0.507269852$.
 
-Figure~\ref{fig:scaling} illustrates the construction by direct
-floating-point integration. At $j=3000$ its variance ratio is
-$W_j^{\g}/j\simeq0.507269852$; the largest computed column
-normalization residual is below $2\times10^{-12}$. These numerical
-checks illustrate the exact analytic construction and are not used
-in the proof. The logarithmic width rule is chosen for a simple
-uniform asymptotic guarantee and need not optimize small spins.
-For example, at $N=400$, its risk is approximately $2.11276018$,
-compared with the coherent-state risk $2.10872335$ and the NH lower
-bound $2.07352470$.
+The numerical values are obtained by composite trapezoidal quadrature
+on $[-j-12\sqrt{\max_m S_m},\,j+12\sqrt{\max_m S_m}]$, with mesh
+spacing at most $0.2$. This finite interval is used only for numerical
+integration; the measurement in \eqref{eq:gaussian-povm} retains every
+real outcome. The largest computed column normalization residual is
+below $2\times10^{-12}$. At $j=100$, reducing the mesh spacing to $0.1$
+changes $W_j^{\g}$ by approximately $4.3\times10^{-14}$.
+These checks quantify numerical consistency; the limiting constants
+follow from the analytic bounds.
+
+The explicit width sequence is chosen for a uniform asymptotic guarantee
+and need not minimize the risk at a given finite $N$. For example, at
+$N=400$ its risk is approximately $2.11276018$, compared with the
+coherent-state risk $2.10872335$ and the NH lower bound $2.07352470$.
 \begin{figure*}[t]
  \centering
- \includegraphics[width=\textwidth]{precision_scaling.png}
- \caption{Numerical illustration of the explicit Gaussian family,
- the NH lower bound, and the coherent-state benchmark. The Gaussian
- measurement uses \eqref{eq:epsilon}; plotted values are
- floating-point diagnostics, not finite-spin optimality certificates.
- The limiting constants follow from the analytic proof.}
+ \includegraphics[width=\textwidth]{precision_scaling.pdf}
+ \caption{\scalingcaption}
  \label{fig:scaling}
 \end{figure*}
 
 
+\section{Discussion}\label{sec:discussion}
+
+The essential constraint is the average population of the measurement
+seeds. Local squeezing specifies low-variance states, whereas a valid
+measurement also requires their effects to sum to the identity. Column
+normalization imposes this condition exactly and leaves the width
+available to control the variance. The regularization near the equator
+and the estimates at the poles allow the local squeezing balance to be
+used throughout the spin sector. This completes the connection between
+the established local description \cite{He2011,Dammeier2015} and the
+attainable finite-copy correction.
+
+The strict NH gap expresses the same completeness constraint at finite
+size. Seeds that saturate the capped certificate cannot resolve the
+identity in sufficiently large spin sectors, as shown in
+Appendix~\ref{app:NH}. The Gaussian family satisfies completeness
+exactly while its variance differs from the lower bound by only $o(j)$.
+Schur averaging makes this an $o(\sqrt N)$ Fisher-information deficit
+and an $o(N^{-1/2})$ gap in normalized risk. Thus finite-dimensional
+nonattainability of the NH bound is compatible with agreement at the
+first correction.
+
+The logarithmic width sequence gives an explicit asymptotically optimal
+family, while the finite-$N$ example in Section~\ref{sec:gap} shows that
+its convergence can be slow. Optimizing the widths for finite-copy
+performance and determining higher-order corrections are natural next
+questions. The present result concerns local estimation at the maximally
+mixed state; extending the construction to a nonzero reference Bloch
+vector requires accounting for the corresponding change in sector
+states and probabilities.
+
 \section{Conclusions}\label{sec:conclusions}
 
-The first finite-copy correction for two-component qubit
-estimation at the maximally mixed state is $\sqrt{8/\pi}$.
-The result follows from an exact identity decomposition whose
-common planar variance is $j/2+o(j)$, together with a matching
-certificate valid for all measurements.
+The optimal normalized risk for two-parameter qubit estimation at the
+maximally mixed state is
+$2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$.
+An exact Gaussian-column decomposition attains the underlying common
+planar variance $j/2+o(j)$, and its score estimator is exactly locally
+unbiased for every finite $N$. The matching all-POVM lower bound fixes
+the first correction and places the strict finite-copy NH gap at a
+smaller asymptotic order.
 
-Gaussian columns with position-dependent widths enforce
-population completeness before the phase average. Their
-nonnegative energy decomposition controls the poles, the
-equatorial regularization, and the full Gaussian tails.
-The resulting score estimator is exactly locally unbiased for
-every finite $N$. The logarithmic width sequence is a simple
-asymptotic construction; optimizing its finite-copy performance
-is a separate question. The finite-dimensional NH obstruction
-survives as a strict inequality but contributes only
-$o(N^{-1/2})$ to the normalized risk.
-
-\section*{Data availability}
-The numerical data, illustration code, and Lean 4 proof sources
-are included in the accompanying reproduction package.
+\section*{Data and code availability}
+[DATA AND CODE AVAILABILITY TO BE CONFIRMED]
 
 \begin{acknowledgments}
-[Acknowledgments to be added.]
+[ACKNOWLEDGMENTS AND FUNDING TO BE COMPLETED]
 \end{acknowledgments}
+
+\section*{Declarations}
+[DECLARATIONS TO BE CONFIRMED]
 
 \appendix
 \section{Exact statistical reduction and seed representation}
@@ -485,7 +518,10 @@ attainment only when discussing strict finite-dimensional gaps.
 
 
 \section{A sum-of-squares lower bound}\label{sec:lower}
-In this appendix index the $d$ nodes by $i=0,\ldots,d-1$ and the
+This appendix establishes the all-POVM lower bound used in
+Theorem~\ref{thm:main} and defines the capped quantities entering
+the NH value in Section~\ref{sec:gap}.
+Index the $d$ nodes by $i=0,\ldots,d-1$ and the
 $d-1$ edges by $i=0,\ldots,d-2$. Thus
 $c_i=\sqrt{(i+1)(d-1-i)}$. For $j>0$, let $\tau_j$ be the unique
 positive solution of
@@ -557,8 +593,10 @@ Dividing \eqref{eq:cap-squeeze} by $d=2J$ proves both claims.
 
 
 \section{Global Gaussian energy estimates}\label{sec:energy-proof}
-The denominator in Eq.~\eqref{eq:W} couples all columns. The following bound removes it.
-Set
+This appendix proves the Gaussian variance upper bound used in
+Theorem~\ref{thm:main}. The denominator in \eqref{eq:W} couples all
+columns; a lower bound on $h^2/s$ separates them into energies
+that can be estimated uniformly. Set
 \begin{equation}
 \begin{aligned}
 q(t)&=\sqrt{(J^2-t^2)_+},\qquad B_m=\sqrt{J^2-m^2},\\
@@ -885,9 +923,10 @@ and all real outcomes $t$ remain present.
 
 
 \section{Schur averaging and completion of the main proof}\label{sec:averaging}
-Write $\E_N$ for expectation under $P_{N,j}$.
-The passage from spin asymptotics to copy asymptotics can be made
-without exchanging an uncontrolled limit and a growing sum.
+This appendix completes Theorem~\ref{thm:main} by averaging the spin
+bounds over the Schur probabilities. Write $\E_N$ for expectation under
+$P_{N,j}$. The following moment identities and remainder estimate control
+the sum as the number of sectors grows.
 
 \begin{lemma}\label{lem:averaging}
 The Schur probabilities satisfy
@@ -1070,42 +1109,8 @@ For $N\geq10$ the largest-spin sector $j=N/2$ has positive
 probability and a strict Fisher deficit, proving
 $C_N>C_N^{\nh}$.
 
-\begin{thebibliography}{9}
-\raggedright
-
-\bibitem{HayashiOuyang2023}
-M.~Hayashi and Y.~Ouyang,
-``Tight Cram\'er--Rao type bounds for multiparameter quantum metrology
-through conic programming,''
-\href{https://doi.org/10.22331/q-2023-08-29-1094}{\emph{Quantum} \textbf{7}, 1094 (2023)};
-\href{https://arxiv.org/abs/2209.05218}{arXiv:2209.05218}.
-
-\bibitem{ZhangHayashi2026}
-J.~Zhang and M.~Hayashi,
-``Schur--Weyl Reduction of Finite-Copy Precision Bounds for
-Multiparameter Quantum Estimation,''
-\href{https://arxiv.org/abs/2610.38299v1}{arXiv:2610.38299v1} (2026).
-
-\bibitem{TothFrowis2022}
-G.~T\'oth and F.~Fr\"owis,
-``Uncertainty relations with the variance and the quantum Fisher
-information based on convex decompositions of density matrices,''
-\href{https://doi.org/10.1103/PhysRevResearch.4.013075}{\emph{Phys. Rev. Research} \textbf{4}, 013075 (2022)};
-\href{https://arxiv.org/abs/2109.06893}{arXiv:2109.06893}.
-
-\bibitem{He2011}
-Q.~Y.~He, S.-G.~Peng, P.~D.~Drummond, and M.~D.~Reid,
-``Planar quantum squeezing and atom interferometry,''
-\href{https://doi.org/10.1103/PhysRevA.84.022107}{\emph{Phys. Rev. A} \textbf{84}, 022107 (2011)};
-\href{https://arxiv.org/abs/1101.0448}{arXiv:1101.0448}.
-
-\bibitem{Dammeier2015}
-L.~Dammeier, R.~Schwonnek, and R.~F.~Werner,
-``Uncertainty relations for angular momentum,''
-\href{https://doi.org/10.1088/1367-2630/17/9/093046}{\emph{New J. Phys.} \textbf{17}, 093046 (2015)};
-\href{https://arxiv.org/abs/1505.00049}{arXiv:1505.00049}.
-
-\end{thebibliography}
+% 由 REVTeX 自动选择 apsrev4-2，并保留文章题目控制项。
+\bibliography{references}
 \end{document}
 
 

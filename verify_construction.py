@@ -146,27 +146,34 @@ def make_figure(data, path):
     x = [r["j"] for r in sectors]
     axes[0].plot(x, [r["V_over_j"] for r in sectors], "o-", color="#176d8c", label="Explicit Gaussian POVM")
     axes[0].plot(x, [r["NH_lower_V"] / r["j"] for r in sectors], "s--", color="#a85c31", label="All-POVM lower bound")
-    axes[0].axhline(2/3, ls=":", color="#7c8792", label="Coherent POVM")
-    axes[0].axhline(0.5, ls="--", color="#28354a", label="Proved optimal limit: 1/2")
+    axes[0].axhline(2/3, ls=":", color="#7c8792", label="Spin-coherent POVM")
+    axes[0].axhline(0.5, ls="--", color="#28354a", label="Optimal limit: 1/2")
     axes[0].set(xscale="log", xlabel="Spin j", ylabel="Average planar variance / j")
     axes[0].legend(fontsize=8)
     copies = data["finite_copy"]
     axes[1].plot([r["N"] for r in copies], [r["A_construction"] for r in copies], "o-", color="#176d8c", label="Explicit Gaussian POVM")
     axes[1].plot([r["N"] for r in copies], [r["A_NH_lower"] for r in copies], "s--", color="#a85c31", label="NH lower bound")
-    axes[1].axhline(np.sqrt(8/np.pi), color="#28354a", ls="--", label=r"Proved optimal limit: $\sqrt{8/\pi}$")
+    axes[1].axhline(np.sqrt(8/np.pi), color="#28354a", ls="--", label=r"Optimal limit: $\sqrt{8/\pi}$")
     axes[1].set(xscale="log", xlabel="Copies N", ylabel=r"$\sqrt{N}(C-2)$")
     axes[1].legend(fontsize=8)
-    for ax in axes:
+    for label, ax in zip(["(a)", "(b)"], axes):
+        ax.set_title(label, loc="left", fontsize=11)
         ax.grid(alpha=0.18)
     fig.savefig(path, dpi=220)
+    fig.savefig(Path(path).with_suffix(".pdf"))
     plt.close(fig)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-plot", action="store_true")
+    parser.add_argument("--plot-only", action="store_true", help="从已有数据重建图，不重新计算积分")
     args = parser.parse_args()
     directory = Path(__file__).resolve().parent
+    if args.plot_only:
+        data = json.loads((directory / "verification_results.json").read_text(encoding="utf-8"))
+        make_figure(data, directory / "paper" / "precision_scaling.png")
+        raise SystemExit(0)
     spins = [0.5, 1, 2, 5, 10, 20, 50, 100, 300, 1000, 3000]
     sectors = [evaluate(j) for j in spins]
     fine = evaluate(100, step=0.1)

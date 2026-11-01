@@ -1,4 +1,4 @@
-\documentclass[aps,pra,reprint,superscriptaddress]{revtex4-2}
+\documentclass[aps,pra,reprint,superscriptaddress,longbibliography]{revtex4-2}
 \usepackage[UTF8,scheme=plain,fontset=fandol]{ctex}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{graphicx}
@@ -11,8 +11,8 @@
 \newtheorem{remark}[theorem]{注}
 \renewcommand{\proofname}{证明}
 \renewcommand{\appendixname}{附录}
-\renewcommand{\figurename}{图}
-\renewcommand{\tablename}{表}
+\renewcommand{\figurename}{FIG.}
+\renewcommand{\tablename}{TABLE}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\Var}{Var}
 \DeclareMathOperator{\Cov}{Cov}
@@ -29,6 +29,8 @@
 \newcommand{\nh}{\mathrm{NH}}
 \newcommand{\g}{\mathrm G}
 
+\input{figure_caption.tex}
+
 \begin{document}
 \title{双参数量子比特估计中的首个有限拷贝修正}
 \author{Tingyu Zhang}
@@ -40,51 +42,47 @@
 
 \date[]{}
 \begin{abstract}
-
-对有限个量子态拷贝进行联合测量，必须权衡不相容参数的信息。
-无限拷贝精度的修正刻画了有限测量资源带来的代价。
-本文求得最大混合态处双分量量子比特模型的可达局部无偏风险的首个有限拷贝修正项。
-对 $N$ 个拷贝施加任意联合测量，并将总均方误差乘以 $N$ 后，其最优值为
+对有限个量子态拷贝进行联合测量，必须权衡不相容自旋分量的信息。
+精度趋于无限拷贝极限的过程受到测量完备性约束。
+本文求得最大混合态处双参数量子比特估计的可达局部无偏风险的首个有限拷贝修正。
+对 $N$ 个拷贝的联合测量进行优化，总均方误差乘以 $N$ 后的最优值为
 $2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$。
-核心结果是：在 $I/(2j+1)$ 处，两个横向自旋方差的共同凸屋顶等于 $j/2+o(j)$。
-我们以宽度随位置变化的高斯列构造证明上界。每一列的布居积分严格等于一，
-从而有限相位平均对任意有限自旋都给出完备的正算子值测度。
-非负能量分解对整个构造进行控制，包括两极与高斯尾部；
-平方和证书则给出适用于所有测量的匹配下界。
-该构造具有显式的宽度参数，并对每个有限 $N$ 配有严格局部无偏的得分估计量。
-因此，对 $N\geq10$ 存在的严格有限拷贝 Nagaoka--Hayashi 间隙为 $o(N^{-1/2})$。
-
+核心结果是：在自旋 $j$ 的最大混合态 $I/(2j+1)$ 处，两个横向自旋方差的共同凸屋顶等于 $j/2+o(j)$。
+我们构造宽度随位置变化的高斯列，使每一列的布居积分严格等于一，
+再以有限相位平均对每个有限自旋构成完备的正算子值测度。
+一致的能量估计与匹配的平方和下界共同确定最优修正。
+一个显式宽度序列及相应的得分估计量达到这一修正，同时对每个有限 $N$ 保持严格局部无偏。
+因此，对 $N\geq10$ 存在的严格有限拷贝 Nagaoka--Hayashi 间隙，
+对归一化风险仅贡献 $o(N^{-1/2})$。
 \end{abstract}
 
 \maketitle
 
 \section{引言}\label{sec:introduction}
 
-对有限个量子态拷贝进行联合测量，必须权衡不相容观测量的信息。
-即使无限拷贝精度已知，其首个有限拷贝修正也可能取决于低方差测量效应能否组成严格完备的测量。
+多参数量子估计的有限拷贝精度，取决于如何在一次测量中获取不相容观测量的信息。
+即使无限拷贝极限已知，构造达到其首阶修正的完备测量仍是一个独立问题。
 本文研究最大混合态处量子比特两个笛卡尔分量的这一问题。
 
-一般的锥规划刻画了可达局部风险，并允许重建完备测量\cite{HayashiOuyang2023}。
-Schur--Weyl 约化显著缩小了有限拷贝问题的规模\cite{ZhangHayashi2026}。
-这些结果提供了有限维优化框架；固定 $N$ 下测量网格的收敛，并不能确定 $C_N$
-趋于无限拷贝极限的速率。本文研究这一速率，并构造达到该速率的完备测量族。
+锥规划刻画了可达局部风险，并允许重建完备测量\cite{HayashiOuyang2023}。
+Schur--Weyl 约化进一步简化了有限拷贝优化\cite{ZhangHayashi2026}。
+这些方法提供了有限维框架，但固定 $N$ 下测量网格的收敛，
+不能确定最优风险趋于无限拷贝极限的速率。
+本文既要确定随拷贝数增长的修正，也要给出达到该修正的显式正算子值测度（POVM）族。
 
-平面自旋压缩与低方差自旋态的高斯描述是已有的研究工具\cite{He2011,Dammeier2015}。
+平面自旋压缩与低方差自旋态的高斯描述提供了局部构造所需的工具\cite{He2011,Dammeier2015}。
 特别地，文献\cite[定理~4]{Dammeier2015}中的固定压缩渐近结果经旋转与优化后，
-在固定非零纬度 $x$ 处给出局部代价 $j|x|$。
-这提示了形式上的平均值 $j\int_{-1}^1|x|\,dx/2=j/2$。
-尚需满足的条件是 $I/d$ 的精确分解：独立选取的低方差态未必具有所需的平均布居。
-我们的构造逐列施加这一条件，并对平均代价作全局控制。
-因此，新的渐近结果无需引入新的 Schur 约化、凸屋顶恒等式或局部压缩原理。
+在固定非零纬度 $x$ 处给出局部代价 $j|x|$，其形式平均为
+$j\int_{-1}^1|x|\,dx/2=j/2$。
+要实现这一平均值，还需得到 $I/d$ 的精确分解：分别选取的低方差态未必具有所需的平均布居。
+我们先将每一高斯列归一化，再进行相位平均，从而严格满足这一约束，
+并控制整个自旋扇区内的平均方差。
 
-我们求得最优归一化风险的首个修正项，
-$C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$，并给出一个达到该展开式的显式测量族。
-每个有限成员都是完备的 POVM，并配有严格局部无偏的估计量。
-因此，对 $N\geq10$ 存在的严格有限拷贝 Nagaoka--Hayashi（NH）间隙在 $N^{-1/2}$ 尺度上是次阶的。
-
-第~\ref{sec:model}~节定义统计问题及其自旋约化。
-第~\ref{sec:result}~节陈述主要结果，第~\ref{sec:gaussian}~节给出测量与估计量。
-第~\ref{sec:gap}~节讨论有限拷贝比较。附录给出全部技术证明。
+这一构造结合适用于全部 POVM 的下界，给出最优归一化风险
+$C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$。
+显式测量族的每个有限成员均严格完备，并配有严格局部无偏的估计量。
+同一分析表明，对 $N\geq10$ 存在的严格有限拷贝 Nagaoka--Hayashi（NH）间隙，
+在 $N^{-1/2}$ 尺度上是次阶的。证明将精确布居归一化、一致能量估计与 Schur 扇区平均连接起来。
 
 \section{模型与可达精度}\label{sec:model}\label{sec:reduction}
 
@@ -93,7 +91,8 @@ $C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$，并给出一个达到该展开式�
  \rho_{x,y}=\frac12(I+x\sigma_x+y\sigma_y),\qquad x^2+y^2<1,
  \label{eq:model}
 \end{equation}
-在 $(x,y)=(0,0)$ 处的估计问题。参数为密度矩阵的笛卡尔分量。
+在 $(x,y)=(0,0)$ 处的估计问题，其中 $\sigma_x$ 与 $\sigma_y$ 为 Pauli 矩阵。
+参数为 Bloch 向量的笛卡尔分量。
 对每个正整数 $N$，在 $\rho_{x,y}^{\otimes N}$ 上施加一次任意联合 POVM，
 其测量结果可以离散或连续。要求估计量 $\widehat\theta=(\widehat x,\widehat y)$ 满足
 \begin{equation}
@@ -110,13 +109,15 @@ $C_N=2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$，并给出一个达到该展开式�
 \end{equation}
 测量与估计量均可依赖于参考点。辅助系统、经典随机化、测量结果数目及效应算子的秩均不受限制。
 
-记 $J_x,J_y,J_z$ 为自旋 $j$ 的角动量算符，$d=2j+1$。相关的共同方差凸屋顶为
+取 $\hbar=1$，记 $J_x,J_y,J_z$ 为自旋 $j$ 的角动量算符，$d=2j+1$。
+相关的共同方差凸屋顶为
 \begin{equation}
  V_j=\min_{\sum_a p_a\ket{\psi_a}\bra{\psi_a}=I/d}
  \sum_a p_a\bigl(\Var_{\psi_a}J_x+\Var_{\psi_a}J_y\bigr).
  \label{eq:roof}
 \end{equation}
-两个方差使用同一个分解。这类共同凸屋顶属于基于纯态分解的不确定性关系的一般框架\cite{TothFrowis2022}。
+其中 $p_a$ 为概率，$\psi_a$ 为归一化纯态。两个方差使用同一个分解。
+这类共同凸屋顶属于基于纯态分解的不确定性关系的一般框架\cite{TothFrowis2022}。
 
 令 $\mathcal J_N=\{j_{\min},j_{\min}+1,\ldots,N/2\}$，其中偶数 $N$ 对应
 $j_{\min}=0$，奇数 $N$ 对应 $j_{\min}=1/2$。Schur 分解及其在参考点处的概率为
@@ -179,14 +180,16 @@ T_j&=\frac83j(j+1)-4V_j.
 
 \end{theorem}
 
-证明将完备性与局部压缩计算分开处理。
+式 \eqref{eq:main} 的系数由各自旋扇区内恒等算子完备分解的代价决定。
 附录~\ref{sec:lower} 给出适用于所有 POVM 的平方和证书，其下界为 $L_j=j/2+o(j)$。
 附录~\ref{sec:energy-proof} 证明严格完备的高斯测量族具有平均方差 $W_j^{\g}=j/2+o(j)$。
 因此，$L_j\leq V_j\leq W_j^{\g}$ 确定了自旋渐近行为。
 
 Schur 平均自旋满足 $\mathbb E_N j/\sqrt N\to\sqrt{2/\pi}$。
 对任意固定的自旋序列 $r_j=o(j)$，附录~\ref{sec:averaging} 将有限个小自旋项与大自旋项直接分开，
-证明 $\mathbb E_N r_j=o(\sqrt N)$。这提供了从自旋结果导出 $N^{-1/2}$ 修正所需的一致性。
+证明 $\mathbb E_N r_j=o(\sqrt N)$。因此，关于 $j$ 首阶线性的方差代价，
+在平均后成为 $\sqrt N$ 阶的 Fisher 信息损失。
+式 \eqref{eq:reductions} 再将这一损失转化为归一化风险的 $N^{-1/2}$ 修正。
 特别地，证明涵盖 $N$ 的两种奇偶性，并包含全部小自旋扇区。
 
 \section{完备测量}\label{sec:gaussian}
@@ -224,8 +227,8 @@ E_j(dt,\ell)&=\frac1L\ket{v_{t,\ell}}\bra{v_{t,\ell}}\,dt,\\
  \sum_{\ell=0}^{L-1}\int_\R E_j(dt,\ell)=I.
  \label{eq:complete}
 \end{equation}
-这里没有截断，也没有后续重新归一化。
-相应的 $I/d$ 分解具有密度 $s_j(t)/(dL)$ 和归一化向量 $v_{t,\ell}/\sqrt{s_j(t)}$。
+因此，列归一化固定恒等算子的对角元，相位平均消去非对角元。
+这一完备性关系在整个实数结果空间上成立。相应的 $I/d$ 分解具有密度 $s_j(t)/(dL)$ 和归一化向量 $v_{t,\ell}/\sqrt{s_j(t)}$。
 
 记 $W_j[b]$ 为其平均平面方差，并令 $A_m=j(j+1)-m^2$。
 相位旋转保持两个方差之和，因此
@@ -234,7 +237,13 @@ E_j(dt,\ell)&=\frac1L\ket{v_{t,\ell}}\bra{v_{t,\ell}}\,dt,\\
  \left[\sum_m A_m v_m(t)^2-\frac{h_j(t)^2}{s_j(t)}\right]dt.
  \label{eq:W}
 \end{equation}
-为明确起见，定理~\ref{thm:main} 中测量的宽度完全确定为
+宽度的选择来自方差中两种代价的平衡。
+附录~\ref{sec:energy-proof} 将式 \eqref{eq:W} 控制为非负的位置能量、
+离散梯度能量及一个较小的系数修正之和。
+对重标度自旋坐标 $x=m/J$，前两者的首阶密度分别为 $x^2b(x)$ 和 $1/[4b(x)]$。
+远离赤道时，增大宽度会提高前者并降低后者，二者的平衡提示取 $b(x)=1/(2|x|)$。
+我们将其正则化为 $b_\epsilon(x)=1/(2\sqrt{x^2+\epsilon^2})$；
+配合式 \eqref{eq:epsilon}，定理~\ref{thm:main} 中的测量采用显式宽度
 \begin{equation}
  S_m=\frac{J^2-m^2}{2\sqrt{m^2+\epsilon_j^2J^2}},\qquad
  J=j+\frac12,
@@ -242,7 +251,8 @@ E_j(dt,\ell)&=\frac1L\ket{v_{t,\ell}}\bra{v_{t,\ell}}\,dt,\\
 \end{equation}
 并可取 $L=\max(2j+1,3)$。首先测量 Schur 标签 $j$。
 对 $j>0$，施加式 \eqref{eq:gaussian-povm} 的测量，将各效应算子与重数空间的恒等算子作张量积；
-对 $j=0$，使用恒等效应算子。结果为 $(j,t,\ell)$ 时，条件得分为
+对 $j=0$，使用恒等效应算子。得分是结果概率对数在参考点处的梯度。
+结果为 $(j,t,\ell)$ 时，其条件值为
 \begin{equation}
  u(j,t,\ell)=\frac{2h_j(t)}{s_j(t)}
  \begin{pmatrix}\cos\phi_\ell\\ \sin\phi_\ell\end{pmatrix}.
@@ -291,46 +301,67 @@ $\bra{v_{t,\ell}}J_+\ket{v_{t,\ell}}=e^{i\phi_\ell}h_j(t)$。
 \end{equation}
 \end{corollary}
 
-障碍来自精确的布居约束：在足够大的自旋扇区中，饱和截顶证书的种子无法分解恒等算子。
-高斯列严格满足该约束，而平均平面方差的损失仅为 $o(j)$。
-Schur 平均将其转化为 $o(\sqrt N)$ 的 Fisher 信息损失和 $o(N^{-1/2})$ 的风险间隙。
+图~\ref{fig:scaling} 将显式构造与 NH 下界、相干态基准作比较。
+左图展示单个自旋扇区的平均方差，右图展示相应的有限拷贝风险修正。
+在 $j=3000$ 时，高斯构造的方差比为 $W_j^{\g}/j\simeq0.507269852$。
 
-图~\ref{fig:scaling} 以直接浮点积分展示该构造。
-在 $j=3000$ 时，方差比为 $W_j^{\g}/j\simeq0.507269852$；
+数值使用复合梯形求积，积分区间为
+$[-j-12\sqrt{\max_m S_m},\,j+12\sqrt{\max_m S_m}]$，网格步长不超过 $0.2$。
+这一有限区间仅用于数值积分，式 \eqref{eq:gaussian-povm} 中的测量仍保留所有实数结果。
 所计算的最大列归一化残差小于 $2\times10^{-12}$。
-这些数值检查展示精确解析构造的行为，不参与证明。
-选用对数宽度规则是为了给出简单的一致渐近保证，它未必对小自旋最优。
-例如，在 $N=400$ 时，该构造的风险约为 $2.11276018$，
+在 $j=100$ 时，将网格步长减半至 $0.1$，$W_j^{\g}$ 的变化约为 $4.3\times10^{-14}$。
+这些检查量化了数值一致性；极限常数由解析界确定。
+
+显式宽度序列提供一致的渐近保证，未必在给定的有限 $N$ 处使风险最小。
+例如，在 $N=400$ 时，其风险约为 $2.11276018$，
 相干态风险为 $2.10872335$，NH 下界为 $2.07352470$。
 \begin{figure*}[t]
  \centering
- \includegraphics[width=\textwidth]{precision_scaling.png}
- \caption{显式高斯测量族、NH 下界与相干态基准的数值展示。
- 高斯测量采用式 \eqref{eq:epsilon}；图中数值为浮点诊断结果，不能充当有限自旋最优性的证书。
- 极限常数由解析证明确定。}
+ \includegraphics[width=\textwidth]{precision_scaling.pdf}
+ \caption{\scalingcaption}
  \label{fig:scaling}
 \end{figure*}
 
+\section{讨论}\label{sec:discussion}
+
+关键约束是测量种子的平均布居。局部压缩给出低方差态，
+而合法测量还要求相应效应算子之和为恒等算子。
+列归一化严格施加这一条件，同时保留调节宽度以控制方差的自由度。
+赤道附近的正则化与两极处的估计，使局部压缩中的平衡可以贯穿整个自旋扇区。
+这将已有的局部描述\cite{He2011,Dammeier2015}连接到可达的有限拷贝修正。
+
+严格的 NH 间隙体现了有限规模下的同一完备性约束。
+如附录~\ref{app:NH} 所示，在足够大的自旋扇区中，
+饱和截顶证书的种子无法分解恒等算子。
+高斯测量族严格满足完备性，而其方差与下界的差仅为 $o(j)$。
+Schur 平均将这一差转化为 $o(\sqrt N)$ 的 Fisher 信息缺额，
+以及归一化风险中 $o(N^{-1/2})$ 的间隙。
+因此，NH 界在有限维下的不可达性与其首阶修正的准确性可以同时成立。
+
+对数宽度序列给出了显式的渐近最优测量族，
+而第~\ref{sec:gap}~节的有限 $N$ 例子表明，其收敛可能较慢。
+针对有限拷贝表现优化宽度，以及确定更高阶修正，是自然的后续问题。
+本文的结果针对最大混合态处的局部估计；若要将构造推广到非零参考 Bloch 向量，
+则需处理扇区内状态及扇区概率的相应变化。
+
 \section{结论}\label{sec:conclusions}
 
-最大混合态处双分量量子比特估计的首个有限拷贝修正系数为 $\sqrt{8/\pi}$。
-这一结果来自平均共同平面方差为 $j/2+o(j)$ 的恒等算子精确分解，
-以及适用于所有测量的匹配证书。
+最大混合态处双参数量子比特估计的最优归一化风险为
+$2+\sqrt{8/\pi}\,N^{-1/2}+o(N^{-1/2})$。
+精确的高斯列分解达到相应的共同平均平面方差 $j/2+o(j)$，
+其得分估计量对每个有限 $N$ 均严格局部无偏。
+匹配的全 POVM 下界确定了首阶修正，并表明严格有限拷贝 NH 间隙属于更小的渐近阶。
 
-宽度随位置变化的高斯列在相位平均之前便满足布居完备性。
-其非负能量分解控制两极、赤道处的正则化以及全部高斯尾部。
-所得得分估计量对每个有限 $N$ 均严格局部无偏。
-对数宽度序列给出一个简单的渐近构造；优化其有限拷贝表现是另一个问题。
-有限维 NH 障碍仍表现为严格不等式，但对归一化风险仅贡献 $o(N^{-1/2})$。
-
-\section*{数据可用性}
-
-数值数据、绘图代码与 Lean 4 证明源码包含于随附的复现材料包中。
+\section*{数据与代码可用性}
+[DATA AND CODE AVAILABILITY TO BE CONFIRMED]
 
 \renewcommand{\acknowledgmentsname}{致谢}
 \begin{acknowledgments}
-[致谢内容待补充。]
+[ACKNOWLEDGMENTS AND FUNDING TO BE COMPLETED]
 \end{acknowledgments}
+
+\section*{声明}
+[DECLARATIONS TO BE CONFIRMED]
 
 \appendix
 
@@ -416,7 +447,8 @@ $p_{a,m}=v_{a,m}^2/n_a$，$\mu_a=n_a/d$。
 
 \section{平方和下界}\label{sec:lower}
 
-本附录将 $d$ 个节点记为 $i=0,\ldots,d-1$，$d-1$ 条边记为 $i=0,\ldots,d-2$，
+本附录证明定理~\ref{thm:main} 所用的全 POVM 下界，
+并定义第~\ref{sec:gap}~节 NH 值中的截顶量。将 $d$ 个节点记为 $i=0,\ldots,d-1$，$d-1$ 条边记为 $i=0,\ldots,d-2$，
 从而 $c_i=\sqrt{(i+1)(d-1-i)}$。对 $j>0$，令 $\tau_j$ 为下式的唯一正解：
 \begin{equation}
  \sum_{i=0}^{d-2}(c_i-\tau_j)_+=\tau_j.
@@ -484,7 +516,9 @@ $c_i^2=J^2-(i+1-J)^2$ 且 $\tau_j<J$。截顶方程给出
 
 \section{高斯能量的全局估计}\label{sec:energy-proof}
 
-式 \eqref{eq:W} 的分母将所有列耦合在一起。下面的界将其消去。令
+本附录证明定理~\ref{thm:main} 所用的高斯方差上界。
+式 \eqref{eq:W} 的分母将所有列耦合在一起；对 $h^2/s$ 使用下界，
+可以将其转化为能够逐项一致估计的能量。令
 \begin{equation}
 \begin{aligned}
 q(t)&=\sqrt{(J^2-t^2)_+},\qquad B_m=\sqrt{J^2-m^2},\\
@@ -779,8 +813,8 @@ $O((\log J)^{50}/\sqrt J)$。
 
 \section{Schur 平均与主定理证明的完成}\label{sec:averaging}
 
-记 $\E_N$ 为概率 $P_{N,j}$ 下的期望。
-从自旋渐近行为过渡到拷贝数渐近行为时，可避免交换未经控制的极限与项数增长的求和。
+本附录对自旋界作 Schur 概率平均，完成定理~\ref{thm:main} 的证明。
+记 $\E_N$ 为概率 $P_{N,j}$ 下的期望。下面的矩恒等式与余项估计控制了扇区数增长时的求和。
 
 \begin{lemma}\label{lem:averaging}
 
@@ -943,41 +977,7 @@ $23/20$、$6/5$ 和 $5/4$，这些下界之和的两倍减六大于一。
 当 $N\geq10$ 时，最大自旋扇区 $j=N/2$ 的概率为正，且具有严格的 Fisher 信息缺额，
 从而 $C_N>C_N^{\nh}$。
 
-\begin{thebibliography}{9}
-\raggedright
-
-\bibitem{HayashiOuyang2023}
-M.~Hayashi and Y.~Ouyang,
-``Tight Cram\'er--Rao type bounds for multiparameter quantum metrology
-through conic programming,''
-\href{https://doi.org/10.22331/q-2023-08-29-1094}{\emph{Quantum} \textbf{7}, 1094 (2023)};
-\href{https://arxiv.org/abs/2209.05218}{arXiv:2209.05218}.
-
-\bibitem{ZhangHayashi2026}
-J.~Zhang and M.~Hayashi,
-``Schur--Weyl Reduction of Finite-Copy Precision Bounds for
-Multiparameter Quantum Estimation,''
-\href{https://arxiv.org/abs/2610.38299v1}{arXiv:2610.38299v1} (2026).
-
-\bibitem{TothFrowis2022}
-G.~T\'oth and F.~Fr\"owis,
-``Uncertainty relations with the variance and the quantum Fisher
-information based on convex decompositions of density matrices,''
-\href{https://doi.org/10.1103/PhysRevResearch.4.013075}{\emph{Phys. Rev. Research} \textbf{4}, 013075 (2022)};
-\href{https://arxiv.org/abs/2109.06893}{arXiv:2109.06893}.
-
-\bibitem{He2011}
-Q.~Y.~He, S.-G.~Peng, P.~D.~Drummond, and M.~D.~Reid,
-``Planar quantum squeezing and atom interferometry,''
-\href{https://doi.org/10.1103/PhysRevA.84.022107}{\emph{Phys. Rev. A} \textbf{84}, 022107 (2011)};
-\href{https://arxiv.org/abs/1101.0448}{arXiv:1101.0448}.
-
-\bibitem{Dammeier2015}
-L.~Dammeier, R.~Schwonnek, and R.~F.~Werner,
-``Uncertainty relations for angular momentum,''
-\href{https://doi.org/10.1088/1367-2630/17/9/093046}{\emph{New J. Phys.} \textbf{17}, 093046 (2015)};
-\href{https://arxiv.org/abs/1505.00049}{arXiv:1505.00049}.
-
-\end{thebibliography}
+% 由 REVTeX 自动选择 apsrev4-2，并保留文章题目控制项。
+\bibliography{references}
 \end{document}
 
